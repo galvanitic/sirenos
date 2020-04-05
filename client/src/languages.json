@@ -1,0 +1,35 @@
+{
+  "types": [
+    
+    {
+      "iso": "es",
+      "language": "Español",
+      "landing": ["Bienvenido a", "Por favor seleccione su idioma preferido."],
+      "hi": ["Hola!", "¿Puedo usar 'cookies' para salvar su preferencia de idioma?", "Que son cookies?", "Sí"]
+    },
+    {
+      "iso": "en",
+      "language": "English",
+      "landing": ["Welcome to", "Please select your preferred language."],
+      "hi": ["Hi!", "Can I use cookies to save your language preference?", "What are cookies?", "Yes"]
+    },
+    {
+      "iso": "pt",
+      "language": "Português",
+      "landing": ["Bem-vindo à", "Por favor selecione o seu idioma preferido."],
+      "hi": ["Oi!", "Posso usar 'cookies' para salvar a sua preferência de idioma?", "O que são cookies?","Sim"]
+    },
+    {
+      "iso": "zh",
+      "language": "中文",
+      "landing": ["欢迎来到", "请选择您的首选语言。"],
+      "hi": ["你好", "我可以使用“ cookies”保存您的语言偏好吗?", "什么是“ cookies”？", "是"]
+    },
+    {
+      "iso": "hi",
+      "language": "हिन्दी",
+      "landing": ["में स्वागत", "कृपया अपनी पसंदीदा भाषा चुनें।"],
+      "hi": ["नमस्ते", "क्या मैं आपकी भाषा वरीयता को बचाने के लिए 'कुकीज़' का उपयोग कर सकता हूं?", "'कुकीज़' क्या हैं?", "हाँ"]
+    }
+  ]
+}

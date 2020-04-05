@@ -1,0 +1,27 @@
+{
+  "name": "instancia",
+  "version": "1.0.0",
+  "description": "Instancia community resources.",
+  "main": "index.js",
+  "dependencies": {
+    "concurrently": "^5.1.0",
+    "react-cookie": "^4.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "cd client && npm start",
+    "server": "cd server && npm start",
+    "start": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/galvanitic/instancia.git"
+  },
+  "author": "Rodolfo Jahaziel Galvan Martinez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/galvanitic/instancia/issues"
+  },
+  "homepage": "https://github.com/galvanitic/instancia#readme"
+}

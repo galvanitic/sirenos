@@ -1,0 +1,161 @@
+@import url("https://use.typekit.net/keq4xak.css");
+$blue: #384fa9;
+$red: #e6516f;
+$pink: #f5d3c8;
+// Bely Display Regular
+// font-family: bely-display, sans-serif;
+// font-weight: 400;
+// font-style: normal;
+
+
+// Bely Italic
+// font-family: bely, serif;
+// font-weight: 400;
+// font-style: italic;
+
+
+// Bely Regular
+// font-family: bely, serif;
+// font-weight: 400;
+// font-style: normal;
+
+
+// Bely Bold
+// font-family: bely, serif;
+// font-weight: 700;
+// font-style: normal;
+
+
+// Bely Bold Italic
+// font-family: bely, serif;
+// font-weight: 700;
+// font-style: italic;
+// @import "./reset-scss/reset-src.css";
+
+// .NavBar {
+// }
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  height: 100vh;
+  // border: 1px solid red;
+  .lang-list {
+    width: 20vw;
+    .lang-list-item {
+      justify-content: center;
+      text-align: center;
+    }
+  }
+  div.landing {
+    // border: 1px solid green;
+    display: flex;
+    width: 100%;
+    height: 95vh;
+    // overflow-x: hidden !important;
+    // background-color: black;
+    // justify-content: center;
+    justify-content: center;
+    align-items: center;
+    // border: 1px solid red;
+    flex-direction: column;
+    .landing-img {
+      // border: solid 2px purple;
+      display: flex;
+      justify-content: center;
+      height: 50vh;
+      padding: 10vh 0;
+      #siren {
+        position: absolute;
+      }
+      #blob {
+        position: absolute;
+      }
+    }
+    h1 {
+      // border: 2px solid blue;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      font-family: bely-display, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 5em;
+      text-align: center;
+      margin: 0;
+      color: $blue;
+    }
+    h2 {
+      // border: 2px solid orange;
+      margin: 0;
+      height: 0;
+      width: 100%;
+      .slidingVertical {
+        // border: 1px solid greenyellow;
+        display: flex;
+        justify-content: center;
+        span {
+          // border: 1px solid red;
+          color: white;
+          top: 15px;
+          font-size: larger;
+        }
+      }
+    }
+    .landing-bttn:hover {
+      background-color: #f15a78;
+    }
+    .landing-bttn {
+      width: 500px;
+      height: 40px;
+      background-color: $red;
+      .sentence-bttn {
+        position: relative;
+        display: flex;
+        width: 100%;
+        // height: 30px;
+        // border: 1px solid blue;1
+        justify-content: center;
+        .slidingVertical {
+          color: white;
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          width: 100%;
+          align-items: center;
+          margin-top: -32px;
+          .lang-bttn {
+            align-items: center;
+            position: absolute;
+            // border: 1px solid red;
+            font-size: 20px !important;
+            // bottom: 100px;
+          }
+        }
+      }
+    }
+  }
+}
+footer {
+  box-shadow: 0px -1px 10px 0px gainsboro;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  font-family: bely, serif;
+  font-weight: bold;
+  color: $blue;
+  font-style: normal;
+  justify-content: center;
+  a.github {
+    color: $blue;
+    position: absolute;
+    left: 20px;
+    height: 25px;
+  }
+  .footer-icon {
+    // width: 20px;
+    position: absolute;
+    right: 20px;
+    height: 25px;
+    filter: drop-shadow(1px 1px 4px $blue);
+  }
+}
