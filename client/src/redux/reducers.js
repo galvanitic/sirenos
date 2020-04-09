@@ -25,4 +25,4 @@ const sirens  = (state = [], action) => {
 }
 
 
-export default(combineReducers({sirens}));
+export default(combineReducers({language, sirens}));

@@ -5,31 +5,31 @@
       "iso": "es",
       "language": "Español",
       "landing": ["Bienvenido a", "Por favor seleccione su idioma preferido."],
-      "hi": ["Hola!", "¿Puedo usar 'cookies' para salvar su preferencia de idioma?", "Que son cookies?", "Sí"]
+      "hi": ["Hola!", "¡Bienvenido a Siren! Mi nombre es Rodolfo Galván, soy un residente estadounidense bajo el estatus 'DACA' que emigró de Mexico a la edad de 3 años. Desarrollé esta aplicación web para proporcionar recursos y aliviar las almas de muchos inmigrantes estadounidenses. Puede usar Siren para rastrear y reportar redadas de ICE en los EE. UU. Y localizar recursos. Todo el código que escribí está disponible al publico en GitHub (haga clic en el icono de GitHub en el pie de página para darle un vistazo); Confía en mí, no almacenaré tu información sin tu consentimiento.","¿Puedo usar 'cookies' para salvar su preferencia de idioma?", "Que son cookies?", "Sí"]
     },
     {
       "iso": "en",
       "language": "English",
       "landing": ["Welcome to", "Please select your preferred language."],
-      "hi": ["Hi!", "Can I use cookies to save your language preference?", "What are cookies?", "Yes"]
+      "hi": ["Hi!", "Welcome to Siren! My name is Rodolfo Galvan, I am a 'DACA-mented' U.S. resident who emmigrated from Mexcio at age 3. I developed this web application to provide resources and to ease souls of many U.S. immigrants. You can use Siren to track and report ICE Raids around the U.S. and to locate resources. All the code I wrote is open source and available on GitHub (click on the GitHub icon in the footer to check it out); trust in me, I won't store any of your information without consent.","Can I use cookies to save your language preference?", "What are cookies?", "Yes"]
     },
     {
       "iso": "pt",
       "language": "Português",
       "landing": ["Bem-vindo à", "Por favor selecione o seu idioma preferido."],
-      "hi": ["Oi!", "Posso usar 'cookies' para salvar a sua preferência de idioma?", "O que são cookies?","Sim"]
+      "hi": ["Oi!", "Bem-vindo ao 'Siren'! Meu nome é Rodolfo Galván, sou um residente dos EUA baixo o status 'DACA' que emigrou do México aos 3 anos de idade. Eu desenvolvi este aplicativo da web para fornecer recursos e facilitar as almas de muitos imigrantes. Você pode usar o Siren para rastrear e reportar incursões de ICE nos EUA. Você tambem podera localizar recursos. Todo o código que escrevi está disponível ao público no GitHub (clique no ícone do GitHub no rodapé para dar uma olhada); Confie em mim, não armazenarei suas informações sem o seu consentimento.","Posso usar 'cookies' para salvar a sua preferência de idioma?", "O que são cookies?","Sim"]
     },
     {
       "iso": "zh",
       "language": "中文",
       "landing": ["欢迎来到", "请选择您的首选语言。"],
-      "hi": ["你好", "我可以使用“ cookies”保存您的语言偏好吗?", "什么是“ cookies”？", "是"]
+      "hi": ["你好", "欢迎来到“Siren”！ 我叫RodolfoGalván，我是美国居民，具有'DACA'身份，三岁时从墨西哥移民。 我开发了此Web应用程序，以提供资源并减轻许多美国移民的痛苦。 您可以使用Siren在美国跟踪和报告ICE袭击。 美国 并找到资源。 我编写的所有代码都可以在GitHub上公开使用（单击页脚中的GitHub图标进行查看）； 相信我，未经您的同意，我不会存储您的信息。","我可以使用“ cookies”保存您的语言偏好吗?", "什么是“ cookies”？", "是"]
     },
     {
       "iso": "hi",
       "language": "हिन्दी",
       "landing": ["में स्वागत", "कृपया अपनी पसंदीदा भाषा चुनें।"],
-      "hi": ["नमस्ते", "क्या मैं आपकी भाषा वरीयता को बचाने के लिए 'कुकीज़' का उपयोग कर सकता हूं?", "'कुकीज़' क्या हैं?", "हाँ"]
+      "hi": ["नमस्ते", "'सायरन' में आपका स्वागत है! मेरा नाम रोडोल्फो गाल्वान है, मैं 'डीएसीए' की स्थिति के तहत एक अमेरिकी निवासी हूं, जो 3 साल की उम्र में मैक्सिको से आया था। मैंने संसाधनों को प्रदान करने और कई अमेरिकी प्रवासियों की आत्माओं को कम करने के लिए इस वेब एप्लिकेशन को विकसित किया। आप US में ICE छापे को ट्रैक करने और रिपोर्ट करने के लिए सायरन का उपयोग कर सकते हैं। UU। और संसाधनों का पता लगाएं। मेरे द्वारा लिखा गया सभी कोड GitHub पर जनता के लिए उपलब्ध है (एक नज़र लेने के लिए पाद लेख में GitHub आइकन पर क्लिक करें); मेरा विश्वास करो, मैं आपकी जानकारी को आपकी सहमति के बिना संग्रहीत नहीं करूंगा।","क्या मैं आपकी भाषा वरीयता को बचाने के लिए 'कुकीज़' का उपयोग कर सकता हूं?", "'कुकीज़' क्या हैं?", "हाँ"]
     }
   ]
 }

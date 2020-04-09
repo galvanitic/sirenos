@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import Hi from '../components/Hi';
+import Router from '../Router';
 import { chLang } from "../redux/actions";
 
 const mapStateToProps = state => {
@@ -10,8 +10,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    chLang: lang_id => dispatch(chLang(lang_id))
+    chLang: (lang_id) => dispatch(chLang(lang_id))
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Hi)
+export default connect(mapStateToProps, mapDispatchToProps)(Router)

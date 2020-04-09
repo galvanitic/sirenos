@@ -1,4 +1,6 @@
 @import url("https://use.typekit.net/keq4xak.css");
+@import url('https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
 $blue: #384fa9;
 $red: #e6516f;
 $pink: #f5d3c8;
@@ -32,6 +34,33 @@ $pink: #f5d3c8;
 // font-style: italic;
 // @import "./reset-scss/reset-src.css";
 
+// --- 
+
+// GaramondFBText Regular
+// font-family: garamond-fb-text, serif;
+// font-weight: 400;
+// font-style: normal;
+
+
+// GaramondFBText RegularItal
+// font-family: garamond-fb-text, serif;
+// font-weight: 400;
+// font-style: italic;
+
+
+// GaramondFBText BoldItal
+// font-family: garamond-fb-text, serif;
+// font-weight: 700;
+// font-style: italic;
+
+
+// GaramondFBText Bold
+// font-family: garamond-fb-text, serif;
+// font-weight: 700;
+// font-style: normal;
+
+
+
 // .NavBar {
 // }
 body {
@@ -39,6 +68,11 @@ body {
   overflow-x: hidden;
   height: 100vh;
   // border: 1px solid red;
+  .NavBar {
+    .app-bar {
+      background-color: $blue;
+    }
+  }
   .lang-list {
     width: 20vw;
     .lang-list-item {
@@ -95,7 +129,7 @@ body {
         justify-content: center;
         span {
           // border: 1px solid red;
-          color: white;
+          color: whitesmoke;
           top: 15px;
           font-size: larger;
         }
@@ -128,6 +162,7 @@ body {
             position: absolute;
             // border: 1px solid red;
             font-size: 20px !important;
+            color: whitesmoke;
             // bottom: 100px;
           }
         }
@@ -137,19 +172,33 @@ body {
 }
 footer {
   box-shadow: 0px -1px 10px 0px gainsboro;
-  background-color: white;
+  background-color: whitesmoke;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  font-family: bely, serif;
-  font-weight: bold;
-  color: $blue;
+  font-family: acier-bat-solid,sans-serif;
+  font-weight: 400;
   font-style: normal;
+  color: $blue;
   justify-content: center;
-  a.github {
-    color: $blue;
-    position: absolute;
-    left: 20px;
-    height: 25px;
+  .upper-ftr {
+
+  }
+  hr {
+    width: 8vw;
+    background-color: $blue;
+    // border: $blue 1px solid;
+    height: 1px;
+  }
+  .lower-ftr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 10%;
+    padding-bottom: 10px;
+    a {
+      color: $blue;
+    }
   }
   .footer-icon {
     // width: 20px;
