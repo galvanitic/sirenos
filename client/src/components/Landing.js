@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { useContext } from 'react';
+import { store } from "../context/store";
 import languages from '../languages';
 import Button from '@material-ui/core/Button';
-import SimpleDialog from '../containers/SimpleDialog'
+import SimpleDialog from '../components/SimpleDialog'
 import blob from '../img/blob-white.png';
 import siren1 from '../img/siren-1.png';
 import siren2 from '../img/siren-2.png';
@@ -25,7 +26,13 @@ function Landing (props) {
   const [open, setOpen] = React.useState(false);
   const [selectedValue, setSelectedValue] = React.useState(null);
   const didMountRef = React.useRef(false)
-  
+  const globalState = useContext(store);
+  const {dispatch} = globalState;
+  // dispatch({type: 'CH_LANG', payload: 4})
+  debugger
+  let setLanguage = lang => () => dispatch({ type: "CH_LANG", payload: lang });
+  setLanguage(4)
+  console.log(globalState)
   
   const handleClickOpen = () => {
     setOpen(true);
@@ -38,10 +45,8 @@ function Landing (props) {
   };
   React.useEffect(() => {
     if (didMountRef.current) {
-      // console.log(props.language)
-      debugger
       if(props.language !== null){
-        window.location.replace("/hi")
+        // window.location.replace("/hi")
       }
     } else {didMountRef.current = true}
   })

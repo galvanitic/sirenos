@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import SimpleDialog from '../components/SimpleDialog';
-import { chLang } from "../redux/actions";
+import { chLang } from "../context/actions";
 
 const mapStateToProps = state => {
   return {

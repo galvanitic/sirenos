@@ -2,9 +2,9 @@ import React from 'react';
 import { Switch, Route, Redirect } from "react-router";
 import { connect } from "react-redux";
 import cookie from 'cookie';
-import Landing from './containers/Landing';
-import Hi from './containers/Hi';
-import Tracker from './containers/Tracker';
+import Landing from './components/Landing';
+import Hi from './components/Hi';
+import Tracker from './components/Tracker';
 
 
 const Router = (props) => {

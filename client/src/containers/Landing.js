@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import Landing from '../components/Landing';
-import { chLang } from "../redux/actions";
+import { chLang } from "../context/actions";
 
 const mapStateToProps = state => {
   return {

@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import Tracker from '../components/Tracker';
-import { chLang, fetchSirens, addSiren } from "../redux/actions";
+import { chLang, fetchSirens, addSiren } from "../context/actions";
 
 const mapStateToProps = state => {
   return {
