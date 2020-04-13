@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Redirect } from "react-router-dom";
 import languages from '../languages';
 import Button from '@material-ui/core/Button';
 import SimpleDialog from '../containers/SimpleDialog'
@@ -21,52 +22,63 @@ import siren15 from '../img/siren-15.png';
 let sirens = [siren1, siren2, siren3, siren4, siren5, siren6, siren7, siren8, siren9, siren10, siren11, siren12, siren13, siren14, siren15];
 const ranImg = [Math.floor((Math.random() * 13) + 1)];
 
-function Landing (props) {
+const Landing = (props) => {
   const [open, setOpen] = React.useState(false);
   const [selectedValue, setSelectedValue] = React.useState(null);
-  const didMountRef = React.useRef(false)
-  
-  
+
   const handleClickOpen = () => {
     setOpen(true);
   };
   
   const handleClose = (value) => {
     setOpen(false);
-    // setSelectedValue(value);
-    props.chLang(value)
+    setSelectedValue(value);
   };
-  React.useEffect(() => {
-    if (didMountRef.current) {
-      // console.log(props.language)
-      debugger
-      if(props.language !== null){
-        window.location.replace("/hi")
-      }
-    } else {didMountRef.current = true}
-  })
+  
+  const Content = () => {
+    return (
+      <div className="landing">
+        <h2 className="sentence">
+          <div className="slidingVertical">
+            {languages.types.map((lan, i) => <span key={i+1}>{lan.landing[0]}</span>)}
+          </div>
+        </h2>
+        <h1>Siren.</h1>
+        {/* <p>You speak {languages.types[props.language].language}</p> */}
+        <div className="landing-img">
+          <img id="blob" src={blob} />
+          <img id="siren" src={sirens[ranImg]} />
+        </div>
+        <Button className="landing-bttn" variant="contained" color="primary" onClick={handleClickOpen}>
+        <h2 className="sentence sentence-bttn">
+          <div className="slidingVertical">
+            {languages.types.map((lan, i) => <span className="lang-bttn" key={i+1}>{lan.landing[1]}</span>)}
+          </div>
+        </h2>
+        </Button>
+        <SimpleDialog languages={languages} selectedValue={selectedValue} open={open} onClose={handleClose} />
+      </div>
+    );
+  }
+
+  const checkLang = () => {
+    if ( props.language !== null) {
+      return false;
+    }else {
+      return true;
+    }
+  }
+  
+  const Component = () => {
+    return(   
+      checkLang()
+        ? <Content />
+        : <Redirect to='/hi' />
+      )
+  }
 
   return (
-    <div className="landing">
-      <h2 className="sentence">
-        <div className="slidingVertical">
-          {languages.types.map((lan, i) => <span key={i+1}>{lan.landing[0]}</span>)}
-        </div>
-      </h2>
-      <h1>Siren.</h1>
-      <div className="landing-img">
-        <img id="blob" src={blob} />
-        <img id="siren" src={sirens[ranImg]} />
-      </div>
-      <Button className="landing-bttn" variant="contained" color="primary" onClick={handleClickOpen}>
-      <h2 className="sentence sentence-bttn">
-        <div className="slidingVertical">
-          {languages.types.map((lan, i) => <span className="lang-bttn" key={i+1}>{lan.landing[1]}</span>)}
-        </div>
-      </h2>
-      </Button>
-      <SimpleDialog languages={languages} selectedValue={selectedValue} open={open} onClose={handleClose} />
-    </div>
+    <Component />
   );
 }
 

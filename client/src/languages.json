@@ -5,7 +5,7 @@
       "iso": "es",
       "language": "Español",
       "landing": ["Bienvenido a", "Por favor seleccione su idioma preferido."],
-      "hi": ["Hola!", "¡Bienvenido a Siren! Mi nombre es Rodolfo Galván, soy un residente estadounidense bajo el estatus 'DACA' que emigró de Mexico a la edad de 3 años. Desarrollé esta aplicación web para proporcionar recursos y aliviar las almas de muchos inmigrantes estadounidenses. Puede usar Siren para rastrear y reportar redadas de ICE en los EE. UU. Y localizar recursos. Todo el código que escribí está disponible al publico en GitHub (haga clic en el icono de GitHub en el pie de página para darle un vistazo); Confía en mí, no almacenaré tu información sin tu consentimiento.","¿Puedo usar 'cookies' para salvar su preferencia de idioma?", "Que son cookies?", "Sí"]
+      "hi": ["Hola!", "¡Bienvenido a Siren! Mi nombre es Rodolfo Galván, soy un residente estadounidense bajo el estatus 'DACA' que emigró de Mexico a la edad de 3 años. Desarrollé esta aplicación web para proporcionar recursos y aliviar las almas de muchos inmigrantes estadounidenses. Puede usar Siren para rastrear y reportar redadas de ICE en los EE. UU. y localizar recursos. Todo el código que escribí está disponible al publico en GitHub (haga clic en el icono de GitHub en el pie de página para darle un vistazo); Confíe en mí, no almacenaré su información sin su consentimiento.","¿Puedo usar 'cookies' para salvar su preferencia de idioma?", "Que son cookies?", "Sí"]
     },
     {
       "iso": "en",
@@ -17,7 +17,7 @@
       "iso": "pt",
       "language": "Português",
       "landing": ["Bem-vindo à", "Por favor selecione o seu idioma preferido."],
-      "hi": ["Oi!", "Bem-vindo ao 'Siren'! Meu nome é Rodolfo Galván, sou um residente dos EUA baixo o status 'DACA' que emigrou do México aos 3 anos de idade. Eu desenvolvi este aplicativo da web para fornecer recursos e facilitar as almas de muitos imigrantes. Você pode usar o Siren para rastrear e reportar incursões de ICE nos EUA. Você tambem podera localizar recursos. Todo o código que escrevi está disponível ao público no GitHub (clique no ícone do GitHub no rodapé para dar uma olhada); Confie em mim, não armazenarei suas informações sem o seu consentimento.","Posso usar 'cookies' para salvar a sua preferência de idioma?", "O que são cookies?","Sim"]
+      "hi": ["Oi!", "Bem-vindo ao 'Siren'! Meu nome é Rodolfo Galván, e eu sou um residente dos EUA baixo o status 'DACA' que emigrou do México aos 3 anos de idade. Eu desenvolvi este aplicativo da web para fornecer recursos e calmar as almas de muitos imigrantes. Você pode usar o Siren para rastrear e reportar incursões de ICE nos EUA. Você tambem podera localizar recursos. Todo o código que escrevi está disponível ao público no GitHub (clique no ícone do GitHub no rodapé para dar uma olhada); Confie em mim, não armazenarei as suas informações sem o seu consentimento.","Posso usar 'cookies' para salvar a sua preferência de idioma?", "O que são cookies?","Sim"]
     },
     {
       "iso": "zh",

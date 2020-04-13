@@ -4,7 +4,7 @@ import { combineReducers } from "redux";
 const language = (state = null, action) => {
   switch (action.type) {
     case 'CH_LANG':
-      return action.value;
+      return action.value
     default:
       return state;
   }

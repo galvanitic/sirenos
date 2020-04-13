@@ -1,18 +1,15 @@
 import React from 'react';
 import { Switch, Route, Redirect } from "react-router";
-import { connect } from "react-redux";
-import cookie from 'cookie';
+// import cookie from 'cookie';
 import Landing from './containers/Landing';
 import Hi from './containers/Hi';
 import Tracker from './containers/Tracker';
 
 
+
 const Router = (props) => {
-  const checkAuth = (lang) => {
-    // const cookies = cookie.parse(document.cookie);
-    // return cookies["lang_id"] ? true : false;
-    // debugger
-    if ( lang !== null) {
+  const checkAuth = () => {
+    if ( props.language !== null) {
       return true;
     }else {
       return false;
@@ -20,12 +17,12 @@ const Router = (props) => {
   }
   
   const ProtectedRoute = ({component: Component, ...rest}) => {
-      return(
+    return(   
       <Route
       {...rest}
-      render={(props)=> checkAuth(props.lang)
-          ? <Component {...props} />
-          : <Redirect to='/' />
+      render={(props)=> checkAuth()
+        ? <Component {...props} />
+        : <Redirect to='/' />
       }
       />
       )

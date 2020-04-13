@@ -1,3 +1,4 @@
+@import url("https://use.typekit.net/keq4xak.css");
 @import url("https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Yatra+One&display=swap");
 .hi-container {
@@ -14,6 +15,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-bottom: 5vh;
 }
 
 .hi-container .siren-img {
@@ -67,6 +69,10 @@
 }
 
 .hi-container .intro p {
+  font-family: mr-eaves-sans, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 25px;
   z-index: 2;
   width: 50%;
   text-align: center;
@@ -102,6 +108,7 @@
 #zh h1, #zh p {
   font-family: 'Zhi Mang Xing', cursive !important;
   font-size: 40;
+  font-weight: 400;
 }
 
 #zh p {
@@ -110,5 +117,6 @@
 
 #hi h1, #hi p {
   font-family: 'Yatra One', cursive;
+  font-weight: 400;
 }
 /*# sourceMappingURL=hi.css.map */

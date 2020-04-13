@@ -1,3 +1,9 @@
+export const chLang = (index) => {
+  return {
+    type: 'CH_LANG',
+    value: index
+  }
+}
 export const fetchSirens = () => {
   return  {
     type: 'FETCH_SIRENS',
@@ -16,12 +22,5 @@ export const rmSiren = (id) => {
   return {
     type: 'RM_SIREN',
     value: id
-  }
-}
-
-export const chLang = (lang_id) => {
-  return {
-    type: 'CH_LANG',
-    value: lang_id
   }
 }

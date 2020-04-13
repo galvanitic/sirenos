@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
-import Landing from '../components/Landing';
 import { chLang } from "../redux/actions";
+import Landing from '../components/Landing';
 
 const mapStateToProps = state => {
   return {
@@ -10,7 +10,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    chLang: (lang_id) => dispatch(chLang(lang_id))
+    chLang: index => dispatch(chLang(index))
   }
 }
 

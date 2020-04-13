@@ -10,7 +10,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    chLang: lang_id => dispatch(chLang(lang_id))
+    chLang: index => dispatch(chLang(index))
   }
 }
 

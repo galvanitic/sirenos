@@ -1,6 +1,7 @@
 $blue: #384fa9;
 $red: #e6516f;
 $pink: #f5d3c8;
+@import url("https://use.typekit.net/keq4xak.css");
 @import url('https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
 
@@ -11,6 +12,7 @@ $pink: #f5d3c8;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 5vh;
   .siren-img {
     height: 270px;
     z-index: 10;
@@ -50,12 +52,17 @@ $pink: #f5d3c8;
       height: 70vh;
     }
     p {
+      font-family: mr-eaves-sans, sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      font-size: 25px;
       z-index: 2;
       width: 50%;
       text-align: center;
       background-color: $pink;
       padding: 10px;
       border-radius: 5px;
+      // word-spacing: .5vw;
     }
   }
   .agree-cookies-bttn {
@@ -78,10 +85,12 @@ $pink: #f5d3c8;
 #zh h1, #zh p {
   font-family: 'Zhi Mang Xing', cursive !important;
   font-size: 40;
+  font-weight: 400;
 }
 #zh p {
   font-size: 30px !important;
 }
 #hi h1, #hi p{
   font-family: 'Yatra One', cursive;
+  font-weight: 400;
 }
