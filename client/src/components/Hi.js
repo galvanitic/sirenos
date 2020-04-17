@@ -8,9 +8,6 @@ import siren from '../img/siren-1.png'
 import Snackbar from '@material-ui/core/Snackbar';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
-import LinearProgress from '@material-ui/core/LinearProgress';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import countdown from 'countdown';
 import cookie from 'cookie';
 
 const cookies = cookie.parse(document.cookie);
@@ -103,24 +100,16 @@ const Hi = props => {
     setState({open: true, agreed: false})
   }
   
-  const checkLang = () => {
-    if (cookies["lang_id"] >= 0) {
-      return true;
-    }else {
-      return false;
-    }
-  }
-  
   const Content = () => {
     return(
       <div id={checkSpecialLang()} className="hi-container">
         {/* <p>{completed}</p> */}
         {/* <CircularProgress variant="static" value={completed} /> */}
        <h1>{auth ? text[0] : null}</h1>
-       <img style={sirenStyle} className='siren-img' src={siren} />
+       <img style={sirenStyle} className='siren-img' src={siren} alt='Merman' />
        <div className='intro'>
          <p>{auth ? text[1] : null}</p>
-         <img style={blobStyle} src={blob} />
+         <img style={blobStyle} src={blob} alt='' />
        </div>
        <p className="question">{auth ? text[2] : null}</p>
        <div className='io'>

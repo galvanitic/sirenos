@@ -1,12 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
+import '../css/tracker.css'
 
 const Tracker = (props) => {
   React.useEffect(() => {
     props.loaderOff()
-  }, [props.loaderOff()])
+  }, [props])
 
   return (
-    <div>
+    <div className='tracker-comp'>
       This is the tracker...
     </div>
   );

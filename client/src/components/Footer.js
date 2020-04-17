@@ -25,7 +25,7 @@ class Footer extends Component {
           </a>
 
         </div>
-        <img className="footer-icon" src={anchor} />
+        <img className="footer-icon" src={anchor} alt='' />
       </footer>
     );
   }

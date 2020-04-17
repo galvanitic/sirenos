@@ -61,8 +61,8 @@ const Landing = (props) => {
         <h1>Siren.</h1>
         {/* <p>You speak {languages.types[props.language].language}</p> */}
         <div className="landing-img">
-          <img style={blobStyle} id="blob" src={blob} />
-          <img style={sirenStyle} id="siren" src={sirens[ranImg]} />
+          <img style={blobStyle} id="blob" src={blob} alt='Merman' />
+          <img style={sirenStyle} id="siren" src={sirens[ranImg]} alt='' />
         </div>
         <Button className="landing-bttn" variant="contained" color="primary" onClick={handleClickOpen}>
         <h2 className="sentence sentence-bttn">
