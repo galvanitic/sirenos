@@ -8,6 +8,7 @@ import siren from '../img/siren-1.png'
 import Snackbar from '@material-ui/core/Snackbar';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
+import LinearProgress from '@material-ui/core/LinearProgress';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import countdown from 'countdown';
 import cookie from 'cookie';
@@ -20,9 +21,6 @@ const Hi = props => {
   const [cookieLang, setCookieLang] = React.useState(null);
   const [auth, setAuth] = React.useState(false)
   const [red, setRed] = React.useState(false)
-  const [startTime, setStartTime] = React.useState(null)
-  const [endTime, setEndTime] = React.useState(null)
-  const [completed, setCompleted] = React.useState(0);
   const [state, setState] = React.useState({
     scrollHeight: 0,
     open: false,
@@ -44,13 +42,18 @@ const Hi = props => {
           setCookieLang(languages.types[cookies["lang_id"]].cookie);
           setAuth(true);
       }else {
-        console.log('set state called b/c default')
         setAuth(false)
       }
     }
+    //call function to set component data
     checkAuth()
     window.addEventListener("scroll", scrollChange);
-  }, [props.language, cookies["lang_id"]])
+    //beggin tracking scroll
+  }, [props.language, cookies["lang_id"], state.open])
+  
+  
+
+
 
   // cool scroll effect
   const blobStyle = { 
@@ -92,16 +95,14 @@ const Hi = props => {
   }
 
   const handleAgree = () => {
-    console.log('Me llamaron?')
-    // document.cookie = `lang_id=${props.language}; max-age= ${365*24*60*60}`;
+    props.loaderOn()
     setState({open: true, agreed: true})
-    setTimeout(() => {setRed(true); setStartTime(new Date()); setEndTime(new Date().getTime() + 5000)}, 5000)
-    console.log(countdown(startTime, endTime))
+    setTimeout(() => setRed(true), 5000)
   }
   const handleDisagree = () => {
     setState({open: true, agreed: false})
   }
-
+  
   const checkLang = () => {
     if (cookies["lang_id"] >= 0) {
       return true;
@@ -109,10 +110,12 @@ const Hi = props => {
       return false;
     }
   }
-
+  
   const Content = () => {
     return(
       <div id={checkSpecialLang()} className="hi-container">
+        {/* <p>{completed}</p> */}
+        {/* <CircularProgress variant="static" value={completed} /> */}
        <h1>{auth ? text[0] : null}</h1>
        <img style={sirenStyle} className='siren-img' src={siren} />
        <div className='intro'>
@@ -143,7 +146,6 @@ const Hi = props => {
               <IconButton size="small" aria-label="close" color="inherit" onClick={handleClose}>
                 <CloseIcon fontSize="small" />
               </IconButton>
-              <CircularProgress variant="static" value={completed} />
             </React.Fragment>
           }
         /> :

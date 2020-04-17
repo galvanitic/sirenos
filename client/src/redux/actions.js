@@ -4,6 +4,21 @@ export const chLang = (index) => {
     value: index
   }
 }
+
+export const loaderOn = () => {
+  return {
+    type: 'LOADER_ON',
+    value: null
+  }
+}
+
+export const loaderOff = () => {
+  return {
+    type: 'LOADER_OFF',
+    value: null
+  }
+}
+
 export const fetchSirens = () => {
   return  {
     type: 'FETCH_SIRENS',

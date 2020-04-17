@@ -1,16 +1,19 @@
 import { connect } from "react-redux";
 import Hi from '../components/Hi';
-import { chLang } from "../redux/actions";
+import { chLang, loaderOn, loaderOff } from "../redux/actions";
 
 const mapStateToProps = state => {
   return {
-    language: state.language
+    language: state.language,
+    loader: state.loader
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
-    chLang: index => dispatch(chLang(index))
+    chLang: index => dispatch(chLang(index)),
+    loaderOn: () => dispatch(loaderOn()),
+    loaderOff: () => dispatch(loaderOff())
   }
 }
 

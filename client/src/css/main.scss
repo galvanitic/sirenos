@@ -100,8 +100,11 @@ $pink: #f5d3c8;
   @include animation('float 5s infinite');
 }
 
-// .NavBar {
-// }
+.NavBar {
+  .MuiLinearProgress-barColorSecondary {
+    background-color: $red;
+  }
+}
 body {
   max-width: 100vw;
   overflow-x: hidden;

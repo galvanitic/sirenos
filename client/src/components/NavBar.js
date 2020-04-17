@@ -36,8 +36,7 @@ const useStyles = makeStyles({
 let NavBar = (props) => {
   const [open, setOpen] = React.useState(false);
   const [selectedValue, setSelectedValue] = React.useState(null);
-  const [, updateState] = React.useState();
-  const forceUpdate = React.useCallback(() => updateState({}), []);
+  const [completed, setCompleted] = React.useState(100);
   const classes = useStyles();
   const [state, setState] = React.useState({
     top: false,
@@ -69,7 +68,27 @@ let NavBar = (props) => {
       }
     }
     checkAuth()
-  }, [props.language, cookies["lang_id"]])
+
+    if(props.loader){
+      function progress() {
+        setCompleted((prevCompleted) => (prevCompleted <= 0 ? 100 : prevCompleted - 1));
+      }
+  
+      const timer = setInterval(progress, 50);
+      return () => {
+        clearInterval(timer);
+      };
+    }else if (!props.loader) {
+      function progress() {
+        setCompleted((prevCompleted) => (prevCompleted <= 0 ? prevCompleted + 1  : 100));
+      }
+  
+      const timer = setInterval(progress, 50);
+      return () => {
+        clearInterval(timer);
+      };
+    }
+  }, [props.language, cookies["lang_id"], props.loader])
 
   
 
@@ -129,6 +148,7 @@ let NavBar = (props) => {
   );
   return (
     <div className="NavBar">
+       <LinearProgress className='linear-progress' variant="determinate" value={completed} color='secondary' />
       <AppBar className="app-bar" position="static">
         <Toolbar className="nav-toolbar">
           {state.auth ? 

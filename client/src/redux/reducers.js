@@ -9,6 +9,18 @@ const language = (state = null, action) => {
       return state;
   }
 }
+
+const loader = (state = false, action) => {
+  switch (action.type) {
+    case 'LOADER_ON':
+      return true;
+    case 'LOADER_OFF':
+      return false;
+    default:
+      return state;
+  }
+}
+
 const sirens  = (state = [], action) => {
   switch (action.type) {
     case 'FETCH_SIRENS':
@@ -25,4 +37,4 @@ const sirens  = (state = [], action) => {
 }
 
 
-export default(combineReducers({language, sirens}));
+export default(combineReducers({language, loader, sirens}));
