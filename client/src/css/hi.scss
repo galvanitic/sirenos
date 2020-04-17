@@ -1,5 +1,6 @@
 $blue: #384fa9;
 $red: #e6516f;
+$redDark: #ca4862;
 $pink: #f5d3c8;
 @import url("https://use.typekit.net/keq4xak.css");
 @import url('https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap');
@@ -65,20 +66,50 @@ $pink: #f5d3c8;
       // word-spacing: .5vw;
     }
   }
-  .agree-cookies-bttn {
-    height: 50px;
+  .io{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0;
-    z-index: 10;
-    background-color: $red;
+    flex-direction: row;
     p {
       color: $pink;
       padding: 0;
       height: 100%;
       margin: 0;
+    }
+    .agree-bttn-yes {
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0;
+      z-index: 10;
+      background-color: $red;
+      transition: .3s;
+      box-shadow: none;
+    }
+    .agree-bttn-yes:hover {
+      background-color: $redDark;
+      box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+    }
+    .agree-bttn-no {
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0;
+      z-index: 10;
+      background-color: $red;
+      transition: .3s;
+      box-shadow: none;
+    }
+    .agree-bttn-no:hover {
+      background-color: $redDark;
+      box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14);
     }
   }
 }
@@ -93,4 +124,7 @@ $pink: #f5d3c8;
 #hi h1, #hi p{
   font-family: 'Yatra One', cursive;
   font-weight: 400;
+}
+#hi p {
+  font-size: 20px !important;
 }

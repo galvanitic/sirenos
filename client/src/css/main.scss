@@ -2,7 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
 $blue: #384fa9;
+$blueDark: #314697;
 $red: #e6516f;
+$redDark: #ca4862;
 $pink: #f5d3c8;
 // Bely Display Regular
 // font-family: bely-display, sans-serif;
@@ -59,7 +61,44 @@ $pink: #f5d3c8;
 // font-weight: 700;
 // font-style: normal;
 
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }  
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }  
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
 
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}
+
+@include keyframes(float) {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(20px); }
+  100% { transform: translateY(0px); }
+}
+
+.element {
+  width: 100px;
+  height: 100px;
+  background: black;
+  @include animation('float 5s infinite');
+}
 
 // .NavBar {
 // }
@@ -71,6 +110,25 @@ body {
   .NavBar {
     .app-bar {
       background-color: $blue;
+      .nav-toolbar {
+        .nav-tools {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          .MuiIconButton-colorInherit{
+            transition: .3s;
+          }
+          .MuiIconButton-colorInherit:hover{
+            background-color: $blueDark;
+          }
+          .nav-btn {
+            transition: .3s;
+          }
+          .nav-btn:hover{
+            background-color: $blueDark;
+          }
+        }
+      }
     }
   }
   .lang-list {
@@ -100,9 +158,11 @@ body {
       padding: 10vh 0;
       #siren {
         position: absolute;
+        @include animation('float 5s infinite');
       }
       #blob {
         position: absolute;
+        @include animation('float 7s infinite');
       }
     }
     h1 {
@@ -135,9 +195,6 @@ body {
         }
       }
     }
-    .landing-bttn:hover {
-      background-color: #f15a78;
-    }
     .landing-bttn {
       width: 500px;
       height: 40px;
@@ -167,6 +224,9 @@ body {
           }
         }
       }
+    }
+    .landing-bttn:hover {
+      background-color: $redDark;
     }
   }
 }

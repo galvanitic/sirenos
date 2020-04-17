@@ -1,5 +1,6 @@
 import React from 'react';
 import { Redirect } from "react-router-dom";
+import cookie from 'cookie';
 import languages from '../languages';
 import Button from '@material-ui/core/Button';
 import SimpleDialog from '../containers/SimpleDialog'
@@ -22,9 +23,22 @@ import siren15 from '../img/siren-15.png';
 let sirens = [siren1, siren2, siren3, siren4, siren5, siren6, siren7, siren8, siren9, siren10, siren11, siren12, siren13, siren14, siren15];
 const ranImg = [Math.floor((Math.random() * 13) + 1)];
 
+
 const Landing = (props) => {
   const [open, setOpen] = React.useState(false);
   const [selectedValue, setSelectedValue] = React.useState(null);
+  const [scrollHeight, setScrollHeight] = React.useState(0);
+  
+  const blobStyle = { 
+      transform: `translate(0px, ${- scrollHeight/2}px)` 
+  };
+  const sirenStyle = { 
+    transform: `translate(0px, ${- scrollHeight/5}px)` 
+};
+  const scrollChange = (e) => {
+    const y = window.scrollY;
+    setScrollHeight(y)
+}
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -38,6 +52,7 @@ const Landing = (props) => {
   const Content = () => {
     return (
       <div className="landing">
+        {window.addEventListener("scroll", scrollChange)}
         <h2 className="sentence">
           <div className="slidingVertical">
             {languages.types.map((lan, i) => <span key={i+1}>{lan.landing[0]}</span>)}
@@ -46,8 +61,8 @@ const Landing = (props) => {
         <h1>Siren.</h1>
         {/* <p>You speak {languages.types[props.language].language}</p> */}
         <div className="landing-img">
-          <img id="blob" src={blob} />
-          <img id="siren" src={sirens[ranImg]} />
+          <img style={blobStyle} id="blob" src={blob} />
+          <img style={sirenStyle} id="siren" src={sirens[ranImg]} />
         </div>
         <Button className="landing-bttn" variant="contained" color="primary" onClick={handleClickOpen}>
         <h2 className="sentence sentence-bttn">
@@ -62,18 +77,19 @@ const Landing = (props) => {
   }
 
   const checkLang = () => {
-    if ( props.language !== null) {
-      return false;
-    }else {
+    const cookies = cookie.parse(document.cookie);
+    if (cookies["lang_id"] >= 0 || props.language !== null) {
       return true;
+    }else {
+      return false;
     }
   }
   
   const Component = () => {
     return(   
       checkLang()
-        ? <Content />
-        : <Redirect to='/hi' />
+        ? <Redirect to='/hi' />
+        : <Content />
       )
   }
 
