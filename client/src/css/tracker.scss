@@ -1,3 +1,12 @@
 .tracker-comp {
   height: 95vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0 0 0;
+  .map-container {
+    width: 90%;
+    height: 80vh;
+  }
 }

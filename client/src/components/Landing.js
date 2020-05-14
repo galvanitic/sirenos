@@ -58,7 +58,7 @@ const Landing = (props) => {
             {languages.types.map((lan, i) => <span key={i+1}>{lan.landing[0]}</span>)}
           </div>
         </h2>
-        <h1>Siren.</h1>
+        <h1>Sirenos</h1>
         {/* <p>You speak {languages.types[props.language].language}</p> */}
         <div className="landing-img">
           <img style={blobStyle} id="blob" src={blob} alt='Merman' />

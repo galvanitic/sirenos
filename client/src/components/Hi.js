@@ -92,12 +92,17 @@ const Hi = props => {
   }
 
   const handleAgree = () => {
+    // set a cookie
+    document.cookie = `lang_id=${props.language}; max-age=60*1000`;
+    console.log('Cookie was saved.')
     props.loaderOn()
     setState({open: true, agreed: true})
     setTimeout(() => setRed(true), 5000)
   }
   const handleDisagree = () => {
+    props.loaderOn()
     setState({open: true, agreed: false})
+    setTimeout(() => setRed(true), 5000)
   }
   
   const Content = () => {

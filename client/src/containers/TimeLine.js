@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
-import Tracker from '../components/Tracker';
-import { chLang, fetchSirens, fetchSiren, addSiren, loaderOn, loaderOff } from "../redux/actions";
+import TimeLine from '../components/TimeLine';
+import { chLang, fetchSirens, addSiren, loaderOn, loaderOff } from "../redux/actions";
 
 const mapStateToProps = state => {
   return {
@@ -16,9 +16,8 @@ const mapDispatchToProps = dispatch => {
     loaderOn: () => dispatch(loaderOn()),
     loaderOff: () => dispatch(loaderOff()),
     fetchSirens: () => dispatch(fetchSirens()),
-    fetchSiren: (siren_id) => dispatch(fetchSiren(siren_id)),
     addSiren: (siren) => dispatch(addSiren(siren))
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Tracker)
+export default connect(mapStateToProps, mapDispatchToProps)(TimeLine)
