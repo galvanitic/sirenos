@@ -27,11 +27,10 @@ export const fetchSirens = (start, end) => {
   // Example: http://localhost:4001/sirens/range/2020-01-01+00:00:00/2021-01-01+00:00:00
   return(dispatch) => {
     axios.get(`${sirensurl}/range/${start}/${end}`)
-    .then(res => res.json())
-    .then(sirens => {
+    .then(res => {
       const action = {
         type: 'FETCH_SIRENS',
-        value: sirens
+        value: res.data
       }
       dispatch(action);
     }).catch(err => {
@@ -40,20 +39,20 @@ export const fetchSirens = (start, end) => {
   }
 }
 
-export const fetchSiren = (siren_id) => {
-  return(dispatch) => {
-    axios.get(`${sirensurl}/id/${siren_id}`)
-    .then(siren => {
-      const action = {
-        type: 'FETCH_SIREN',
-        value: siren
-      }
-      dispatch(action);
-    }).catch(err => {
-      console.log(err);
-    })
-  }
-}
+// export const fetchSiren = (siren_id) => {
+//   return(dispatch) => {
+//     axios.get(`${sirensurl}/id/${siren_id}`)
+//     .then(siren => {
+//       const action = {
+//         type: 'FETCH_SIREN',
+//         value: siren
+//       }
+//       dispatch(action);
+//     }).catch(err => {
+//       console.log(err);
+//     })
+//   }
+// }
 
 export const addSiren = (siren) => {
   return {

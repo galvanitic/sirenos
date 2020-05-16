@@ -25,8 +25,6 @@ const sirens  = (state = [], action) => {
   switch (action.type) {
     case 'FETCH_SIRENS':
       return action.value
-    case 'FETCH_SIREN':
-      return action.value
     case 'ADD_SIREN':
       return [...state, action.value]
     case 'RM_SIREN':

@@ -32,12 +32,12 @@ const Hi = props => {
         setio(languages.types[props.language].io)
         setCookieLang(languages.types[props.language].cookie)
         setAuth(true)
-        } else if (cookies["lang_id"] >= 0){
-          // if data is in cookie, use it.
-          setText(languages.types[cookies["lang_id"]].hi);
-          setio(languages.types[cookies["lang_id"]].io);
-          setCookieLang(languages.types[cookies["lang_id"]].cookie);
-          setAuth(true);
+      } else if (cookies["lang_id"] >= 0){
+        // if data is in cookie, use it.
+        setText(languages.types[cookies["lang_id"]].hi);
+        setio(languages.types[cookies["lang_id"]].io);
+        setCookieLang(languages.types[cookies["lang_id"]].cookie);
+        setAuth(true);
       }else {
         setAuth(false)
       }
@@ -45,6 +45,7 @@ const Hi = props => {
     //call function to set component data
     checkAuth()
     window.addEventListener("scroll", scrollChange);
+    document.title = auth ? text[0] : "Sirens | Hi";
     //beggin tracking scroll
   }, [props.language, cookies["lang_id"], state.open])
   
