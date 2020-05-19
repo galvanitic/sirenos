@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import Map from '../components/Map';
-import { chLang, chCurrentUsrGeo, chActiveGeo, fetchSirens, addSiren, loaderOn, loaderOff } from "../redux/actions";
+import { chLang, chCurrentUsrGeo, chActiveGeo, fetchSirens, addSiren, loaderOn, loaderOff, resetRes } from "../redux/actions";
 
 const mapStateToProps = state => {
   return {
@@ -8,7 +8,8 @@ const mapStateToProps = state => {
     loader: state.loader,
     currentUsrGeo: state.currentUsrGeo,
     activeGeo: state.activeGeo,
-    sirens: state.sirens
+    sirens: state.sirens,
+    sirenRes: state.sirenRes
   }
 }
 
@@ -20,7 +21,8 @@ const mapDispatchToProps = dispatch => {
     loaderOn: () => dispatch(loaderOn()),
     loaderOff: () => dispatch(loaderOff()),
     fetchSirens: () => dispatch(fetchSirens()),
-    addSiren: (siren) => dispatch(addSiren(siren))
+    addSiren: (siren) => dispatch(addSiren(siren)),
+    resetRes: () => dispatch(resetRes())
   }
 }
 

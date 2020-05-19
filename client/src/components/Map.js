@@ -27,7 +27,7 @@ const Map = (props) => {
   const [homeLoaded, setHomeLoaded] = React.useState(false);
   let points;
 
-  if (props.sirens !== null){
+  if (props.sirens !== null || props.sirens !== undefined){
     // Making GeoJSON datatype
     points = props.sirens.map(siren => ({
       type: "Feature",
@@ -62,7 +62,12 @@ const Map = (props) => {
     if(props.addFormVisible && homeE != null){
       setAnchorEl(homeE);
     }
-  }, [props.uZoom, props.addFormVisible, homeE])
+    // If siren was added, reset map
+    if(Object.keys(props.sirenRes).length > 0){
+      props.updateParentZoom(4.7);
+      handleClose();
+    }
+  }, [props.uZoom, props.addFormVisible, homeE, props.sirenRes])
 
   // Parent loader
   const triggerLoader = () =>{

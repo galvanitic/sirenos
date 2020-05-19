@@ -77,8 +77,19 @@ export const addSiren = (siren) => {
   return(dispatch) => {
     axios.post(`${sirensurl}/`, siren)
     .then(function(res){
-      console.log(res)
+      const action = {
+        type: 'ADD_SIREN',
+        value: res
+      }
+      dispatch(action)
     })
+  }
+}
+
+export const resetRes = () => {
+  return{
+    type: 'RESET_RES',
+    value: {}
   }
 }
 

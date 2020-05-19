@@ -34,6 +34,7 @@ const Tracker = (props) => {
   const [uZoom, setuZoom] = React.useState(null);
   const [tempAddress, setTempAddress] = React.useState("");
   const [address, setAddress] = React.useState("");
+  const [newSirenID, setNewSirenID] = React.useState("");
   const [auth, setAuth] = React.useState(false);
   const [text, setText] = React.useState(null);
   const [start, setStart] = React.useState(moment().subtract(1, 'years').format("YYYY-MM-DDTHH:mm:ss"));
@@ -46,6 +47,7 @@ const Tracker = (props) => {
   const [err3, setErr3] = React.useState(false);
   const [err4, setErr4] = React.useState(false);
   const [err5, setErr5] = React.useState(false);
+  const [succ1, setSucc1] = React.useState(false);
 
   React.useEffect(() => {
     //call function to set component data
@@ -55,7 +57,21 @@ const Tracker = (props) => {
     if(start !== null && end !== null){
       props.fetchSirens(start.replace("T", "+"), end.replace("T", "+"));
     }
-  }, [start, end, props.language, cookies["lang_id"]]);
+    // If siren was added, reset map
+    if(Object.keys(props.sirenRes).length > 0){
+      if(props.sirenRes.status === 200){
+        setNewSirenID(props.sirenRes.data.newId);
+        setSucc1(true);
+        setErrViewable(true);
+        setTimeout(function() {setErrViewable(false)}, 5000);
+        setTimeout(function(){props.resetRes()}, 10000);
+      }else {
+        setErr5(true);
+        setErrViewable(true);
+        setTimeout(function() {setErrViewable(false)}, 5000);
+      }
+    }
+  }, [start, end, props.language, cookies["lang_id"], props.sirenRes, succ1]);
 
   const checkAuth = () => {
     if(props.language != null){
@@ -261,6 +277,7 @@ const Tracker = (props) => {
           {err3 ? <Alert severity="error">{text.geoErr[2]}</Alert> : null}
           {err4 ? <Alert severity="error">{text.geoErr[3]}</Alert> : null}
           {err5 ? <Alert severity="error">{text.geoErr[4]}</Alert> : null}
+          {succ1 ? <Alert severity="success">{`Siren #${newSirenID} ${text.successAdded}`}</Alert> : null}
         </div>
       </Zoom>
     </div>

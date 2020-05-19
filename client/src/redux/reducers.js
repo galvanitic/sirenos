@@ -42,8 +42,6 @@ const sirens  = (state = [], action) => {
   switch (action.type) {
     case 'FETCH_SIRENS':
       return action.value
-    case 'ADD_SIREN':
-      return null
     case 'RM_SIREN':
       const sirens = [...state];
       sirens.splice(action.value, 1);
@@ -53,5 +51,16 @@ const sirens  = (state = [], action) => {
   }
 }
 
+const sirenRes = (state = {}, action) => {
+  switch (action.type) {
+    case 'ADD_SIREN':
+      return action.value;
+    case 'RESET_RES':
+      return action.value;
+    default:
+      return state;
+  }
+}
 
-export default(combineReducers({language, loader, currentUsrGeo, activeGeo, sirens}));
+
+export default(combineReducers({language, loader, currentUsrGeo, activeGeo, sirens, sirenRes}));

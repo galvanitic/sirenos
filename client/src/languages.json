@@ -30,6 +30,7 @@
         "searchByDate":"Buscar por fecha",
         "searchAroundYou":"Cerca de tí",
         "addSiren":"Añadir Siren",
+        "successAdded": "fue agregado con éxito!",
         "geoErr": [
           "La geolocalización no es compatible con este navegador.",
           "Denegó la solicitud de geolocalización.",
@@ -74,6 +75,7 @@
         "searchByDate":"Search by date",
         "searchAroundYou":"Near you",
         "addSiren":"Add Siren",
+        "successAdded": "was added successfully!",
         "geoErr": [
           "Geolocation is not supported by this browser.",
           "You denied the request for Geolocation.",
@@ -118,6 +120,7 @@
         "searchByDate":"Pesquisar por data",
         "searchAroundYou":"Perto de você",
         "addSiren":"Adicionar Siren",
+        "successAdded": "foi adicionado com sucesso!",
         "geoErr": [
           "A localização geográfica não é suportada por este navegador.",
           "Você negou a solicitação de geolocalização.",
@@ -162,6 +165,7 @@
         "searchByDate":"按日期搜索",
         "searchAroundYou":"在你旁边",
         "addSiren":"添加“警笛”",
+        "successAdded": "已成功添加",
         "geoErr": [
           "此浏览器不支持地理位置。",
           "您拒绝了地理位置定位请求。",
@@ -206,6 +210,7 @@
         "searchByDate":"दिनांक तक खोजें",
         "searchAroundYou":"तुम्हारे पास",
         "addSiren":"\"सायरन\" जोड़ें",
+        "successAdded": "सफलतापूर्वक जोड़ा गया",
         "geoErr": [
           "जियोलोकेशन इस ब्राउज़र द्वारा समर्थित नहीं है।",
           "आपने जियोलोकेशन के अनुरोध को अस्वीकार कर दिया।",

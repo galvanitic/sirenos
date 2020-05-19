@@ -26,9 +26,9 @@ const SirenInfo = (props) => {
         }
       });
     }
-    console.log(props.shouldBeVisible)
-    console.log(props.sirenProps)
-  },[props.shouldBeVisible])
+    
+    console.log(props.sirenRes);
+  },[props.shouldBeVisible, props.sirenRes])
 
   const handleChange = (event) => {
     setDescription(event.target.value);
@@ -45,8 +45,7 @@ const SirenInfo = (props) => {
       "source": source
     }
 
-    console.log(sirenPacket);
-    props.addSiren(sirenPacket)
+    props.addSiren(sirenPacket);
   }
 
   const addSirenBtn = () => {
