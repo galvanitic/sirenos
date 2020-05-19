@@ -277,7 +277,7 @@ const Tracker = (props) => {
           {err3 ? <Alert severity="error">{text.geoErr[2]}</Alert> : null}
           {err4 ? <Alert severity="error">{text.geoErr[3]}</Alert> : null}
           {err5 ? <Alert severity="error">{text.geoErr[4]}</Alert> : null}
-          {succ1 ? <Alert severity="success">{`Siren #${newSirenID} ${text.successAdded}`}</Alert> : null}
+          {succ1 ? <Alert severity="success">{`Sireno #${newSirenID} ${text.successAdded}`}</Alert> : null}
         </div>
       </Zoom>
     </div>

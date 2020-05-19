@@ -182,22 +182,22 @@ let NavBar = (props) => {
       state.auth ?
       <div>
         <List>
-        <ListItem button key={0}>
+        <ListItem button key={0} onClick={() => window.location.href = "https://sirenos.co/track"}>
           <ListItemIcon><GpsFixedIcon /></ListItemIcon>
           <ListItemText primary={state.nav.tracker} />
         </ListItem>
-        <ListItem button key={1}>
+        <ListItem button key={1} onClick={()=> window.location.href = "https://www.informedimmigrant.com/resources/"}>
           <ListItemIcon><ExploreIcon /></ListItemIcon>
           <ListItemText primary={state.nav.resources} />
         </ListItem>
       </List>
       <Divider />
       <List>
-        <ListItem button key={2}>
+        <ListItem button key={2} onClick={() => window.location.href = "mailto:hi@sirenos.co"}>
           <ListItemIcon><MailIcon /></ListItemIcon>
-          <ListItemText primary="siren@rglvn.com" />
+          <ListItemText primary="hi@sirenos.co" />
         </ListItem>
-        <ListItem button key={3}>
+        <ListItem button key={3} onClick={() => window.location.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=finance%40rjgalvan.com&item_name=Sirenos.co&currency_code=USD&source=url"}>
           <ListItemIcon><FavoriteIcon /></ListItemIcon>
           <ListItemText primary={state.nav.donate} />
         </ListItem>
