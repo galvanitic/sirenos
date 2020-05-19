@@ -1,0 +1,150 @@
+$blue: #384fa9;
+$blueDark: #314697;
+$red: #e6516f;
+$redDark: #ca4963;
+$pink: #f5d3c8;
+@import url("https://use.typekit.net/keq4xak.css");
+@import url('https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sanchez&display=swap');
+
+.siren-info-container {
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  span {
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    // border: 1px solid red;
+    div.field {
+      display: flex;
+      p{
+        // border: 1px solid red;
+        font-family: 'Sanchez', serif;
+      }
+      p.descriptor {
+        font-weight: bold;
+        padding-right: 7px;
+      }
+      p.value {
+        
+      }
+    }
+  }
+  span:nth-of-type(1) {
+    background-color: $blue;
+    height: 40px;
+  }
+  span:nth-of-type(2) {
+    background-color: $red;
+    justify-content: center;
+    height: 10px;
+  }
+  span:nth-of-type(3) {
+    color: $blue;
+    div.field {
+      flex-direction: column;
+      justify-content: left;
+      p.descriptor {
+        font-weight: bold;
+        padding-bottom: 0px;
+        margin: 0px;
+      }
+      p.value {
+        margin:0px;
+        padding: 0px 15px;
+      }
+    }
+  }
+  span:nth-of-type(4) {
+    display: flex;
+    justify-content: center;
+    padding: 0px 0px;
+    div{
+      width: 70%;
+      height: 3px;
+      background-color: $blue;
+    }
+  }
+  span:nth-of-type(5) {
+    display: flex;
+    justify-content: center;
+    color: $blue;
+    div.field {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      p.descriptor {
+        font-weight: bold;
+        padding-bottom: 0px;
+        margin: 0px;
+      }
+      p.value {
+        margin:0px;
+      }
+    }
+  }
+}
+.siren-info-form-container {
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  span {
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #addressSpan {
+    background-color: $blue;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  span:nth-of-type(2) {
+    display: flex;
+    .field{
+      width: 100%;
+      .MuiFormControl-root.MuiTextField-root{
+        width: 100%;
+      }
+    }
+  }
+  span:nth-of-type(3) {
+    display: flex;
+    justify-content: center;
+    padding: 0px 0px;
+    div{
+      width: 70%;
+      height: 3px;
+      background-color: $blue;
+    }
+  }
+  #addSirenSpan {
+    display: flex;
+    justify-content: center;
+    background-color: none !important;
+    #disabledAddBtn {
+      display: flex;
+      justify-content: space-between;
+      background-color: none;
+      margin-bottom: 0px;
+      font-family: 'Sanchez', serif;
+    }
+    #addBtn {
+      display: flex;
+      justify-content: space-between;
+      background-color: $red;
+      margin-bottom: 0px;
+      font-family: 'Sanchez', serif;
+    }
+  }
+}

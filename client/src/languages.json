@@ -18,8 +18,33 @@
       "cookie": {
         "true":"Su idioma preferido ha sido guardado.",
         "false": "Su idioma preferido no ha sido guardado en una cookie. Por favor evite recargar la página."
+      },
+      "tracker": {
+        "address": "Dirección",
+        "from": "De",
+        "to": "A",
+        "useLocation": "Usar mi ubicación",
+        "go":"Ir",
+        "or":"o",
+        "makeSiren":"Hacer un \"Siren\"",
+        "searchByDate":"Buscar por fecha",
+        "searchAroundYou":"Cerca de tí",
+        "addSiren":"Añadir Siren",
+        "geoErr": [
+          "La geolocalización no es compatible con este navegador.",
+          "Denegó la solicitud de geolocalización.",
+          "La información de ubicación no está disponible.",
+          "Se agotó el tiempo de espera para solicitar su ubicación.",
+          "Un error desconocido ocurrió."
+        ],
+        "marker": {
+          "date": "Fecha",
+          "description": "Descripción",
+          "source": "Fuente"
+        }
       }
     },
+
     {
       "iso": "en",
       "language": "English",
@@ -37,8 +62,33 @@
       "cookie": {
         "true":"Your language preferences have been saved.",
         "false": "Your preferred language has not been saved in a cookie. Please avoid reloading the page."
+      },
+      "tracker": {
+        "address": "Address",
+        "from": "From",
+        "to": "To",
+        "useLocation": "Use my location",
+        "go":"Go",
+        "or":"or",
+        "makeSiren":"Make a Siren",
+        "searchByDate":"Search by date",
+        "searchAroundYou":"Near you",
+        "addSiren":"Add Siren",
+        "geoErr": [
+          "Geolocation is not supported by this browser.",
+          "You denied the request for Geolocation.",
+          "Location information is unavailable.",
+          "The request to get your location timed out.",
+          "An unknown error occurred."
+        ],
+        "marker": {
+          "date": "Date",
+          "description": "Description",
+          "source": "Source"
+        }
       }
     },
+
     {
       "iso": "pt",
       "language": "Português",
@@ -56,8 +106,33 @@
       "cookie": {
         "true":"Suas preferências de idioma foram salvas.",
         "false": "Seu idioma preferido não foi salvo numa cookie. Por-favor evite regarregar a página."
+      },
+      "tracker": {
+        "address": "Endereço",
+        "from": "De",
+        "to": "Até",
+        "useLocation": "Use minha localização",
+        "go":"Vai",
+        "or":"ou",
+        "makeSiren":"Faça um Siren",
+        "searchByDate":"Pesquisar por data",
+        "searchAroundYou":"Perto de você",
+        "addSiren":"Adicionar Siren",
+        "geoErr": [
+          "A localização geográfica não é suportada por este navegador.",
+          "Você negou a solicitação de geolocalização.",
+          "As informações de localização estão indisponíveis.",
+          "O pedido para obter a sua localização expirou.",
+          "Ocorreu um erro desconhecido."
+        ],
+        "marker": {
+          "date": "Data",
+          "description": "Descrição",
+          "source": "Fonte"
+        }
       }
     },
+
     {
       "iso": "zh",
       "language": "中文",
@@ -75,8 +150,33 @@
       "cookie": {
         "true":"您的语言偏好设置已保存。",
         "false": "您的首选语言尚未保存在Cookie中。 避免重新加载页面。"
+      },
+      "tracker": {
+        "address": "地址",
+        "from": "从",
+        "to": "至",
+        "useLocation": "使用我的位置",
+        "go":"走",
+        "or":"要么",
+        "makeSiren":"做一个“警笛”",
+        "searchByDate":"按日期搜索",
+        "searchAroundYou":"在你旁边",
+        "addSiren":"添加“警笛”",
+        "geoErr": [
+          "此浏览器不支持地理位置。",
+          "您拒绝了地理位置定位请求。",
+          "位置信息不可用。",
+          "获取您的位置的请求超时。",
+          "出现未知错误。"
+        ],
+        "marker": {
+          "date": "日期",
+          "description": "描述",
+          "source": "资源"
+        }
       }
     },
+
     {
       "iso": "hi",
       "language": "हिन्दी",
@@ -94,6 +194,30 @@
       "cookie": {
         "true":"आपकी भाषा प्राथमिकताएं सहेज ली गई हैं।",
         "false": "आपकी पसंदीदा भाषा कुकी में सहेजी नहीं गई है। पृष्ठ को फिर से लोड करने से बचें।"
+      },
+      "tracker": {
+        "address": "पता",
+        "from": "से",
+        "to": "सेवा",
+        "useLocation": "मेरा पता इस्तेमाल करो",
+        "go":"जाओ",
+        "or":"या",
+        "makeSiren":"एक \"मोहिनी\" बनाओ",
+        "searchByDate":"दिनांक तक खोजें",
+        "searchAroundYou":"तुम्हारे पास",
+        "addSiren":"\"सायरन\" जोड़ें",
+        "geoErr": [
+          "जियोलोकेशन इस ब्राउज़र द्वारा समर्थित नहीं है।",
+          "आपने जियोलोकेशन के अनुरोध को अस्वीकार कर दिया।",
+          "स्थान की जानकारी अनुपलब्ध है।",
+          "आपके स्थान को प्राप्त करने का अनुरोध।",
+          "एक अज्ञात ग़लती हुई।"
+        ],
+        "marker": {
+          "date": "तारीख",
+          "description": "विवरण",
+          "source": "स्रोत"
+        }
       }
     }
   ]

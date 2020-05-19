@@ -1,0 +1,246 @@
+@import url("https://use.typekit.net/keq4xak.css");
+@import url("https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yatra+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sanchez&display=swap");
+.siren-info-container {
+  width: 40vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.siren-info-container span {
+  color: white;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.siren-info-container span div.field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.siren-info-container span div.field p {
+  font-family: 'Sanchez', serif;
+}
+
+.siren-info-container span div.field p.descriptor {
+  font-weight: bold;
+  padding-right: 7px;
+}
+
+.siren-info-container span:nth-of-type(1) {
+  background-color: #384fa9;
+  height: 40px;
+}
+
+.siren-info-container span:nth-of-type(2) {
+  background-color: #e6516f;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 10px;
+}
+
+.siren-info-container span:nth-of-type(3) {
+  color: #384fa9;
+}
+
+.siren-info-container span:nth-of-type(3) div.field {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.siren-info-container span:nth-of-type(3) div.field p.descriptor {
+  font-weight: bold;
+  padding-bottom: 0px;
+  margin: 0px;
+}
+
+.siren-info-container span:nth-of-type(3) div.field p.value {
+  margin: 0px;
+  padding: 0px 15px;
+}
+
+.siren-info-container span:nth-of-type(4) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0px 0px;
+}
+
+.siren-info-container span:nth-of-type(4) div {
+  width: 70%;
+  height: 3px;
+  background-color: #384fa9;
+}
+
+.siren-info-container span:nth-of-type(5) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #384fa9;
+}
+
+.siren-info-container span:nth-of-type(5) div.field {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.siren-info-container span:nth-of-type(5) div.field p.descriptor {
+  font-weight: bold;
+  padding-bottom: 0px;
+  margin: 0px;
+}
+
+.siren-info-container span:nth-of-type(5) div.field p.value {
+  margin: 0px;
+}
+
+.siren-info-form-container {
+  width: 30vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.siren-info-form-container span {
+  color: white;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.siren-info-form-container #addressSpan {
+  background-color: #384fa9;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.siren-info-form-container span:nth-of-type(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.siren-info-form-container span:nth-of-type(2) .field {
+  width: 100%;
+}
+
+.siren-info-form-container span:nth-of-type(2) .field .MuiFormControl-root.MuiTextField-root {
+  width: 100%;
+}
+
+.siren-info-form-container span:nth-of-type(3) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0px 0px;
+}
+
+.siren-info-form-container span:nth-of-type(3) div {
+  width: 70%;
+  height: 3px;
+  background-color: #384fa9;
+}
+
+.siren-info-form-container #addSirenSpan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: none !important;
+}
+
+.siren-info-form-container #addSirenSpan #disabledAddBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: none;
+  margin-bottom: 0px;
+  font-family: 'Sanchez', serif;
+}
+
+.siren-info-form-container #addSirenSpan #addBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #e6516f;
+  margin-bottom: 0px;
+  font-family: 'Sanchez', serif;
+}
+/*# sourceMappingURL=sirenInfo.css.map */

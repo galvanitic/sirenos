@@ -31,7 +31,7 @@ const Hi = props => {
         setText(languages.types[props.language].hi)
         setio(languages.types[props.language].io)
         setCookieLang(languages.types[props.language].cookie)
-        setAuth(true)
+        setAuth(true);
       } else if (cookies["lang_id"] >= 0){
         // if data is in cookie, use it.
         setText(languages.types[cookies["lang_id"]].hi);
@@ -94,7 +94,7 @@ const Hi = props => {
 
   const handleAgree = () => {
     // set a cookie
-    document.cookie = `lang_id=${props.language}; max-age=60*1000`;
+    document.cookie = `lang_id=${props.language}; max-age=${3600*24*365}`;
     console.log('Cookie was saved.')
     props.loaderOn()
     setState({open: true, agreed: true})

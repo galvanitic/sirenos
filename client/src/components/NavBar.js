@@ -9,6 +9,7 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
@@ -19,6 +20,13 @@ import MailIcon from '@material-ui/icons/Mail';
 import GpsFixedIcon from '@material-ui/icons/GpsFixed';
 import ExploreIcon from '@material-ui/icons/Explore';
 import FavoriteIcon from '@material-ui/icons/Favorite';
+import FormGroup from '@material-ui/core/FormGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Switch from '@material-ui/core/Switch';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+
+
 import cookie from 'cookie';
 import '../css/main.css'
 const cookies = cookie.parse(document.cookie);
@@ -89,7 +97,62 @@ let NavBar = (props) => {
     }
   }, [props])
 
-  
+  const IOSSwitch = withStyles((theme) => ({
+    root: {
+      width: 42,
+      height: 26,
+      padding: 0,
+      margin: theme.spacing(1),
+    },
+    switchBase: {
+      padding: 1,
+      '&$checked': {
+        transform: 'translateX(16px)',
+        color: theme.palette.common.white,
+        '& + $track': {
+          backgroundColor: '#52d869',
+          opacity: 1,
+          border: 'none',
+        },
+      },
+      '&$focusVisible $thumb': {
+        color: '#52d869',
+        border: '6px solid #fff',
+      },
+    },
+    thumb: {
+      width: 24,
+      height: 24,
+    },
+    track: {
+      borderRadius: 26 / 2,
+      border: `1px solid ${theme.palette.grey[400]}`,
+      backgroundColor: theme.palette.grey[50],
+      opacity: 1,
+      transition: theme.transitions.create(['background-color', 'border']),
+    },
+    checked: {},
+    focusVisible: {},
+  }))(({ classes, ...props }) => {
+    return (
+      <Switch
+        focusVisibleClassName={classes.focusVisible}
+        disableRipple
+        classes={{
+          root: classes.root,
+          switchBase: classes.switchBase,
+          thumb: classes.thumb,
+          track: classes.track,
+          checked: classes.checked,
+        }}
+        {...props}
+      />
+    );
+  });
+
+  const handleChange = (event) => {
+    setState({ ...state, [event.target.name]: event.target.checked });
+  };
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -148,7 +211,7 @@ let NavBar = (props) => {
   return (
     <div className="NavBar">
        <LinearProgress className='linear-progress' variant="determinate" value={completed} color='secondary' />
-      <AppBar className="app-bar" position="static">
+        <AppBar className="app-bar" position="static">
         <Toolbar className="nav-toolbar">
           {state.auth ? 
           <div className="nav-tools">
@@ -158,6 +221,7 @@ let NavBar = (props) => {
                   <IconButton onClick={toggleDrawer(anchor, true)} edge="start" color="inherit" aria-label="menu">
                     <MenuIcon />
                   </IconButton>
+
                   <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
                     {list(anchor)}
                   </Drawer>
@@ -169,6 +233,10 @@ let NavBar = (props) => {
           </div>
           : null}
         </Toolbar>
+        {/* <FormControlLabel
+        control={<IOSSwitch checked={state.checkedB} onChange={handleChange} name="checkedB" />}
+        label="huh"
+      /> */}
       </AppBar>
     </div>
   );

@@ -1,12 +1,251 @@
+$blue: #384fa9;
+$blueDark: #314697;
+$red: #e6516f;
+$redDark: #ca4963;
+$pink: #f5d3c8;
+@import url("https://use.typekit.net/keq4xak.css");
+@import url('https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sanchez&display=swap');
+
 .tracker-comp {
-  height: 95vh;
+  .alerts {
+    position: fixed;
+    bottom: 20px;
+  }
+  height: 93vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px 0 0 0;
+  // padding: 30px 0 0 0;
+  .tracker-bg {
+    // border: 1px solid red;
+    position: absolute;
+    width: 25vw;
+    left: 10px;
+    margin-top: 10px;
+    z-index: 1000;
+    .loader {
+      height: 3px;
+    }
+    .tracker-form {
+      display: flex;
+      flex-direction: column;
+      padding: 5%;
+      p#search-by-date{
+        display: flex;
+        justify-content: center;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        color: $red;
+        font-weight: bold;
+      }
+      p#near-you{
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        // margin-top: 0px;
+        // margin-bottom: 0px;
+        color: $blue;
+      }
+      #locBttn {
+        font-family: 'Sanchez', serif;
+        #locIcon {
+          position: absolute;
+          left: 10px;
+        }
+      }
+      div.or-separator {
+        // height: 2px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        // border: 1px solid red;
+        p {
+          margin: 10px 10px;
+          font-family: 'Sanchez', serif;
+          font-style: italic;
+        }
+        span {
+          width: 55%;
+          height: 2px;
+          background-color: $blue;
+        }
+      }
+
+      div.address-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        #outlined-basic{
+          border-top-right-radius: 0px !important;
+          border-bottom-right-radius: 0px !important;
+        }
+        #searchAddress{
+          margin-left: -3px;
+          border-bottom-left-radius: 0px;
+          border-top-left-radius: 0px;
+        }
+      }
+      #outlined-basic{
+        font-family: 'Sanchez', serif;
+      }
+      .separator {
+        background-color: $red;
+        width: 100%;
+        height: 2px;
+        margin: 12px 0 0 0;
+      }
+      .separator-2 {
+        background-color: $red;
+        width: 100%;
+        height: 2px;
+        margin: 12px 0;
+      }
+      #makeSirenBttn{
+        background-color: $red;
+        margin-bottom: 0px;
+        font-family: 'Sanchez', serif;
+        #locIcon {
+          position: absolute;
+          left: 10px;
+        }
+      }
+      #makeSirenBttn:hover{
+        background-color: $redDark;
+      }
+      #makeSirenBttnDisabled {
+        background-color: #a8a8a8;
+        color: #373737;
+        margin-bottom: 0px;
+        font-family: 'Sanchez', serif;
+        #locIcon {
+          position: absolute;
+          left: 10px;
+        }
+      }
+      .date-grid {
+        display: flex;
+        flex-direction: row;
+        #start-picker-dialog{
+          font-family: 'Sanchez', serif;
+          font-size: 15px;
+        }
+        #end-picker-dialog{
+          font-family: 'Sanchez', serif;
+          font-size: 15px;
+        }
+        .horSpace{
+          width: 10px;
+        }
+      }
+    }
+  }
   .map-container {
-    width: 90%;
-    height: 80vh;
+    width: 100%;
+    height: 100%;
+    .siren-marker {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .siren-marker > img{
+      transition: all .5s;
+      // filter: drop-shadow(.5px .5px 2px $blueDark);
+    }
+    .siren-marker:hover > img{
+      transform: translateY(-1px);
+      filter: drop-shadow(1px 4px 5px black);
+    }
+    .siren-marker:focus{
+      border: none;
+      outline: 0;
+    }
+    .cluster-marker-1 {
+      width: 50px;
+      // height: 55px;
+      display: flex;
+      // flex-direction: column;
+      justify-content: center;
+      // align-items: center;
+      // border: 1px solid red;
+      p {
+        margin-top: 17px;
+        font-family: 'Sanchez', serif;
+        color: white;
+        font-size: 14px;
+        // display: flex;
+        // flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        // border: 1px solid purple;
+        text-align: center;
+        width: 50px;
+        height: 50px;
+        z-index: 1000;
+      }
+      img {
+        // border: 1px solid green;
+      }
+    }
+    .cluster-marker-2 {
+      width: 50px;
+      // height: 55px;
+      display: flex;
+      // flex-direction: column;
+      justify-content: center;
+      // align-items: center;
+      // border: 1px solid red;
+      p {
+        margin-top: 23px;
+        font-family: 'Sanchez', serif;
+        color: white;
+        font-size: 16px;
+        // display: flex;
+        // flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        // border: 1px solid purple;
+        text-align: center;
+        width: 50px;
+        height: 50px;
+        z-index: 1000;
+      }
+      img {
+        // border: 1px solid green;
+      }
+    }
+    .cluster-marker-3 {
+      width: 50px;
+      // height: 55px;
+      display: flex;
+      // flex-direction: column;
+      justify-content: center;
+      // align-items: center;
+      // border: 1px solid red;
+      p {
+        margin-top: 23px;
+        font-family: 'Sanchez', serif;
+        color: white;
+        font-size: 16px;
+        // display: flex;
+        // flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        // border: 1px solid purple;
+        text-align: center;
+        width: 50px;
+        height: 50px;
+        z-index: 1000;
+      }
+      img {
+        // border: 1px solid green;
+      }
+    }
   }
 }

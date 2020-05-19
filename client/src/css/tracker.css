@@ -1,5 +1,9 @@
+@import url("https://use.typekit.net/keq4xak.css");
+@import url("https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yatra+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sanchez&display=swap");
 .tracker-comp {
-  height: 95vh;
+  height: 93vh;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11,11 +15,299 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 30px 0 0 0;
+}
+
+.tracker-comp .alerts {
+  position: fixed;
+  bottom: 20px;
+}
+
+.tracker-comp .tracker-bg {
+  position: absolute;
+  width: 25vw;
+  left: 10px;
+  margin-top: 10px;
+  z-index: 1000;
+}
+
+.tracker-comp .tracker-bg .loader {
+  height: 3px;
+}
+
+.tracker-comp .tracker-bg .tracker-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 5%;
+}
+
+.tracker-comp .tracker-bg .tracker-form p#search-by-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #e6516f;
+  font-weight: bold;
+}
+
+.tracker-comp .tracker-bg .tracker-form p#near-you {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: bold;
+  color: #384fa9;
+}
+
+.tracker-comp .tracker-bg .tracker-form #locBttn {
+  font-family: 'Sanchez', serif;
+}
+
+.tracker-comp .tracker-bg .tracker-form #locBttn #locIcon {
+  position: absolute;
+  left: 10px;
+}
+
+.tracker-comp .tracker-bg .tracker-form div.or-separator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tracker-comp .tracker-bg .tracker-form div.or-separator p {
+  margin: 10px 10px;
+  font-family: 'Sanchez', serif;
+  font-style: italic;
+}
+
+.tracker-comp .tracker-bg .tracker-form div.or-separator span {
+  width: 55%;
+  height: 2px;
+  background-color: #384fa9;
+}
+
+.tracker-comp .tracker-bg .tracker-form div.address-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.tracker-comp .tracker-bg .tracker-form div.address-container #outlined-basic {
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+.tracker-comp .tracker-bg .tracker-form div.address-container #searchAddress {
+  margin-left: -3px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+}
+
+.tracker-comp .tracker-bg .tracker-form #outlined-basic {
+  font-family: 'Sanchez', serif;
+}
+
+.tracker-comp .tracker-bg .tracker-form .separator {
+  background-color: #e6516f;
+  width: 100%;
+  height: 2px;
+  margin: 12px 0 0 0;
+}
+
+.tracker-comp .tracker-bg .tracker-form .separator-2 {
+  background-color: #e6516f;
+  width: 100%;
+  height: 2px;
+  margin: 12px 0;
+}
+
+.tracker-comp .tracker-bg .tracker-form #makeSirenBttn {
+  background-color: #e6516f;
+  margin-bottom: 0px;
+  font-family: 'Sanchez', serif;
+}
+
+.tracker-comp .tracker-bg .tracker-form #makeSirenBttn #locIcon {
+  position: absolute;
+  left: 10px;
+}
+
+.tracker-comp .tracker-bg .tracker-form #makeSirenBttn:hover {
+  background-color: #ca4963;
+}
+
+.tracker-comp .tracker-bg .tracker-form #makeSirenBttnDisabled {
+  background-color: #a8a8a8;
+  color: #373737;
+  margin-bottom: 0px;
+  font-family: 'Sanchez', serif;
+}
+
+.tracker-comp .tracker-bg .tracker-form #makeSirenBttnDisabled #locIcon {
+  position: absolute;
+  left: 10px;
+}
+
+.tracker-comp .tracker-bg .tracker-form .date-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.tracker-comp .tracker-bg .tracker-form .date-grid #start-picker-dialog {
+  font-family: 'Sanchez', serif;
+  font-size: 15px;
+}
+
+.tracker-comp .tracker-bg .tracker-form .date-grid #end-picker-dialog {
+  font-family: 'Sanchez', serif;
+  font-size: 15px;
+}
+
+.tracker-comp .tracker-bg .tracker-form .date-grid .horSpace {
+  width: 10px;
 }
 
 .tracker-comp .map-container {
-  width: 90%;
-  height: 80vh;
+  width: 100%;
+  height: 100%;
+}
+
+.tracker-comp .map-container .siren-marker {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.tracker-comp .map-container .siren-marker > img {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.tracker-comp .map-container .siren-marker:hover > img {
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  -webkit-filter: drop-shadow(1px 4px 5px black);
+          filter: drop-shadow(1px 4px 5px black);
+}
+
+.tracker-comp .map-container .siren-marker:focus {
+  border: none;
+  outline: 0;
+}
+
+.tracker-comp .map-container .cluster-marker-1 {
+  width: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.tracker-comp .map-container .cluster-marker-1 p {
+  margin-top: 17px;
+  font-family: 'Sanchez', serif;
+  color: white;
+  font-size: 14px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  z-index: 1000;
+}
+
+.tracker-comp .map-container .cluster-marker-2 {
+  width: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.tracker-comp .map-container .cluster-marker-2 p {
+  margin-top: 23px;
+  font-family: 'Sanchez', serif;
+  color: white;
+  font-size: 16px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  z-index: 1000;
+}
+
+.tracker-comp .map-container .cluster-marker-3 {
+  width: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.tracker-comp .map-container .cluster-marker-3 p {
+  margin-top: 23px;
+  font-family: 'Sanchez', serif;
+  color: white;
+  font-size: 16px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  z-index: 1000;
 }
 /*# sourceMappingURL=tracker.css.map */

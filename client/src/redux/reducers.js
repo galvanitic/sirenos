@@ -21,12 +21,29 @@ const loader = (state = false, action) => {
   }
 }
 
+const currentUsrGeo = (state = {}, action) => {
+  switch(action.type) {
+    case 'CH_CUR_USR_GEO':
+      return action.value
+    default:
+      return state;
+  }
+}
+const activeGeo = (state = {}, action) => {
+  switch(action.type) {
+    case 'CH_ACTIVE_GEO':
+      return action.value
+    default:
+      return state;
+  }
+}
+
 const sirens  = (state = [], action) => {
   switch (action.type) {
     case 'FETCH_SIRENS':
       return action.value
     case 'ADD_SIREN':
-      return [...state, action.value]
+      return null
     case 'RM_SIREN':
       const sirens = [...state];
       sirens.splice(action.value, 1);
@@ -37,4 +54,4 @@ const sirens  = (state = [], action) => {
 }
 
 
-export default(combineReducers({language, loader, sirens}));
+export default(combineReducers({language, loader, currentUsrGeo, activeGeo, sirens}));

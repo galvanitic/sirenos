@@ -22,6 +22,25 @@ export const loaderOff = () => {
   }
 }
 
+export const chCurrentUsrGeo = (lat, lng) => {
+  return {
+    type: 'CH_CUR_USR_GEO',
+    value: {
+      lat: lat,
+      lng: lng
+    }
+  }
+}
+export const chActiveGeo = (lat, lng) => {
+  return {
+    type: 'CH_ACTIVE_GEO',
+    value: {
+      lat: lat,
+      lng: lng
+    }
+  }
+}
+
 export const fetchSirens = (start, end) => {
   // type: 'FETCH_SIRENS',
   // Example: http://localhost:4001/sirens/range/2020-01-01+00:00:00/2021-01-01+00:00:00
@@ -55,9 +74,11 @@ export const fetchSirens = (start, end) => {
 // }
 
 export const addSiren = (siren) => {
-  return {
-    type: 'ADD_SIREN',
-    value: siren
+  return(dispatch) => {
+    axios.post(`${sirensurl}/`, siren)
+    .then(function(res){
+      console.log(res)
+    })
   }
 }
 
