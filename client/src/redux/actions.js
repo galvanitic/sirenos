@@ -1,4 +1,4 @@
-const sirensurl = "http://localhost:4001/sirens";
+const sirensurl = "http://0.0.0.0:4001/sirens";
 const axios = require('axios');
 
 export const chLang = (index) => {
