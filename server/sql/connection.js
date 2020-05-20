@@ -1,3 +1,5 @@
+"use strict";
+
 const mysql = require('mysql');
 const galvanite = require('./galvanite');
 
@@ -9,7 +11,8 @@ class Connection {
       //create pool
       const config = mysql.createPool({
         connectionLimit: 100,
-        host: galvanite.host,
+        // host: galvanite.host,
+        socketPath: `/cloudsql/${process.env.CLOUD_INSTANCE}`,
         user: galvanite.user,
         password: galvanite.password,
         database: galvanite.db
