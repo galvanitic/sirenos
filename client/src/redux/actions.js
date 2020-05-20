@@ -1,4 +1,4 @@
-const sirensurl = "http://0.0.0.0:4001/sirens";
+const sirensurl = "https://siren-274816.uc.r.appspot.com/sirens";
 const axios = require('axios');
 
 export const chLang = (index) => {

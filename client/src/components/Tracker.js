@@ -33,7 +33,7 @@ const Tracker = (props) => {
   })
   const [uZoom, setuZoom] = React.useState(null);
   const [tempAddress, setTempAddress] = React.useState("");
-  const [address, setAddress] = React.useState("");
+  // const [address, setAddress] = React.useState("");
   const [newSirenID, setNewSirenID] = React.useState("");
   const [auth, setAuth] = React.useState(false);
   const [text, setText] = React.useState(null);

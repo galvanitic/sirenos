@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import GoogleMap from 'google-map-react';
 import useSupercluster from 'use-supercluster';
 import galvanite from '../galvanite';
