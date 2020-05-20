@@ -1,26 +1,23 @@
-"use strict";
-
+'use strict';
 const mysql = require('mysql');
 const galvanite = require('./galvanite');
 
 class Connection {
   constructor () {
     if(!this.pool) {
-      console.log('ligando a mysql...');
-
+      console.log(`ligando a mysql en DB ${galvanite.db}...`);
       //create pool
-      const config = mysql.createPool({
+      const config = {
         connectionLimit: 100,
-        // host: galvanite.host,
-        socketPath: `/cloudsql/${process.env.CLOUD_INSTANCE}`,
+        host: galvanite.host,
         user: galvanite.user,
         password: galvanite.password,
         database: galvanite.db
-      });
+      }
 
       if (process.env.NODE_ENV === 'production' && process.env.CLOUD_INSTANCE) {
         console.log(`connect socket: ${process.env.CLOUD_INSTANCE}`)
-        config.socketPath = `/cloudsql/${process.env.CLOUD_INSTANCE}`
+        // config.socketPath = `/cloudsql/${process.env.CLOUD_INSTANCE}`
       }
 
       this.pool = mysql.createPool(config)
