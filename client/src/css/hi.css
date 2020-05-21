@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Yatra+One&display=swap");
 .hi-container {
   background-color: white;
-  width: 100%;
+  max-width: 100%;
   height: 95vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -18,10 +18,24 @@
   padding-bottom: 5vh;
 }
 
+@media (max-width: 767px) {
+  .hi-container {
+    height: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+}
+
 .hi-container .siren-img {
   height: 270px;
   z-index: 10;
   margin: 0;
+}
+
+@media (max-width: 767px) {
+  .hi-container .siren-img {
+    height: 200px;
+  }
 }
 
 .hi-container h1 {
@@ -49,6 +63,13 @@
   color: #e6516f;
   padding: 10px;
   border-radius: 5px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .hi-container .question {
+    width: 50%;
+  }
 }
 
 .hi-container .intro {
@@ -68,6 +89,14 @@
   height: 70vh;
 }
 
+@media (max-width: 767px) {
+  .hi-container .intro img {
+    height: 40vh;
+    margin-top: -20vh;
+    overflow-x: hidden;
+  }
+}
+
 .hi-container .intro p {
   font-family: mr-eaves-sans, sans-serif;
   font-weight: 700;
@@ -79,6 +108,13 @@
   background-color: #f5d3c8;
   padding: 10px;
   border-radius: 5px;
+}
+
+@media (max-width: 767px) {
+  .hi-container .intro p {
+    font-size: 20px;
+    width: 80%;
+  }
 }
 
 .hi-container .io {

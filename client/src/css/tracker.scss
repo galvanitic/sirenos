@@ -7,8 +7,31 @@ $pink: #f5d3c8;
 @import url('https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sanchez&display=swap');
+$tablet-width: 768px;
+$desktop-width: 1024px;
 
+@mixin phone {
+  @media (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: #{$tablet-width+1}) {
+    @content;
+  }
+}
 .tracker-comp {
+  @include phone {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    height: 135vh;
+  }
   .alerts {
     position: fixed;
     bottom: 20px;
@@ -26,6 +49,13 @@ $pink: #f5d3c8;
     left: 10px;
     margin-top: 10px;
     z-index: 1000;
+    @include phone {
+      width: 100%;
+      left: 0px;
+      margin-top: 0;
+      position: relative;
+      // bottom: -63vh;
+    }
     .loader {
       height: 3px;
     }
@@ -146,6 +176,9 @@ $pink: #f5d3c8;
   .map-container {
     width: 100%;
     height: 100%;
+    @include phone {
+      height: 87vh;
+    }
     .siren-marker {
       background: none;
       border: none;

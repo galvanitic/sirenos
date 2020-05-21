@@ -54,6 +54,12 @@ body {
   height: 90vh;
 }
 
+@media (max-width: 767px) {
+  body {
+    overflow-x: hidden;
+  }
+}
+
 body p {
   font-family: 'Sanchez', serif;
 }
@@ -94,6 +100,15 @@ body .lang-list {
   width: 20vw;
 }
 
+@media (max-width: 767px) {
+  body .lang-list {
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 body .lang-list .lang-list-item {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -119,6 +134,12 @@ body div.landing {
           flex-direction: column;
 }
 
+@media (max-width: 767px) {
+  body div.landing {
+    height: 100%;
+  }
+}
+
 body div.landing .landing-img {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -136,10 +157,22 @@ body div.landing .landing-img #siren {
   animation: float 5s infinite;
 }
 
+@media (max-width: 767px) {
+  body div.landing .landing-img #siren {
+    height: 50%;
+  }
+}
+
 body div.landing .landing-img #blob {
   position: absolute;
   -webkit-animation: float 7s infinite;
   animation: float 7s infinite;
+}
+
+@media (max-width: 767px) {
+  body div.landing .landing-img #blob {
+    height: 50%;
+  }
 }
 
 body div.landing h1 {
@@ -186,6 +219,14 @@ body div.landing .landing-bttn {
   background-color: #e6516f;
 }
 
+@media (max-width: 767px) {
+  body div.landing .landing-bttn {
+    width: 80%;
+    height: 12vh;
+    margin: -10vh 0 4vh 0;
+  }
+}
+
 body div.landing .landing-bttn .sentence-bttn {
   position: relative;
   display: -webkit-box;
@@ -195,6 +236,12 @@ body div.landing .landing-bttn .sentence-bttn {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media (max-width: 767px) {
+  body div.landing .landing-bttn .sentence-bttn {
+    margin-top: -35px;
+  }
 }
 
 body div.landing .landing-bttn .sentence-bttn .slidingVertical {

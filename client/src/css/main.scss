@@ -7,60 +7,25 @@ $blueDark: #314697;
 $red: #e6516f;
 $redDark: #ca4862;
 $pink: #f5d3c8;
-// Bely Display Regular
-// font-family: bely-display, sans-serif;
-// font-weight: 400;
-// font-style: normal;
+$tablet-width: 768px;
+$desktop-width: 1024px;
 
+@mixin phone {
+  @media (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: #{$tablet-width+1}) {
+    @content;
+  }
+}
 
-// Bely Italic
-// font-family: bely, serif;
-// font-weight: 400;
-// font-style: italic;
-
-
-// Bely Regular
-// font-family: bely, serif;
-// font-weight: 400;
-// font-style: normal;
-
-
-// Bely Bold
-// font-family: bely, serif;
-// font-weight: 700;
-// font-style: normal;
-
-
-// Bely Bold Italic
-// font-family: bely, serif;
-// font-weight: 700;
-// font-style: italic;
-// @import "./reset-scss/reset-src.css";
-
-// --- 
-
-// GaramondFBText Regular
-// font-family: garamond-fb-text, serif;
-// font-weight: 400;
-// font-style: normal;
-
-
-// GaramondFBText RegularItal
-// font-family: garamond-fb-text, serif;
-// font-weight: 400;
-// font-style: italic;
-
-
-// GaramondFBText BoldItal
-// font-family: garamond-fb-text, serif;
-// font-weight: 700;
-// font-style: italic;
-
-
-// GaramondFBText Bold
-// font-family: garamond-fb-text, serif;
-// font-weight: 700;
-// font-style: normal;
 
 @mixin keyframes($animation-name) {
   @-webkit-keyframes #{$animation-name} {
@@ -94,6 +59,7 @@ $pink: #f5d3c8;
   100% { transform: translateY(0px); }
 }
 
+
 .element {
   width: 100px;
   height: 100px;
@@ -113,6 +79,9 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   height: 90vh;
+  @include phone {
+    overflow-x: hidden;
+  }
   // border: 1px solid red;
   p{
     font-family: 'Sanchez', serif;
@@ -144,6 +113,10 @@ body {
   }
   .lang-list {
     width: 20vw;
+    @include phone {
+      width: 100vw;
+      display: flex;
+    }
     .lang-list-item {
       justify-content: center;
       text-align: center;
@@ -154,14 +127,13 @@ body {
     display: flex;
     width: 100%;
     height: 95vh;
-    // overflow-x: hidden !important;
-    // justify-content: center;
     justify-content: center;
     align-items: center;
-    // border: 1px solid red;
     flex-direction: column;
+    @include phone {
+      height: 100%;
+    }
     .landing-img {
-      // border: solid 2px purple;
       display: flex;
       justify-content: center;
       height: 50vh;
@@ -169,10 +141,16 @@ body {
       #siren {
         position: absolute;
         @include animation('float 5s infinite');
+        @include phone {
+          height: 50%;
+        }
       }
       #blob {
         position: absolute;
         @include animation('float 7s infinite');
+        @include phone {
+          height: 50%;
+        }
       }
     }
     h1 {
@@ -209,13 +187,19 @@ body {
       width: 500px;
       height: 40px;
       background-color: $red;
+      @include phone {
+        width: 80%;
+        height: 12vh;
+        margin: -10vh 0 4vh 0;
+      }
       .sentence-bttn {
         position: relative;
         display: flex;
         width: 100%;
-        // height: 30px;
-        // border: 1px solid blue;1
         justify-content: center;
+        @include phone {
+          margin-top: -35px;
+        }
         .slidingVertical {
           color: white;
           display: flex;

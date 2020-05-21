@@ -17,6 +17,22 @@
           align-items: center;
 }
 
+@media (max-width: 767px) {
+  .tracker-comp {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 135vh;
+  }
+}
+
 .tracker-comp .alerts {
   position: fixed;
   bottom: 20px;
@@ -28,6 +44,15 @@
   left: 10px;
   margin-top: 10px;
   z-index: 1000;
+}
+
+@media (max-width: 767px) {
+  .tracker-comp .tracker-bg {
+    width: 100%;
+    left: 0px;
+    margin-top: 0;
+    position: relative;
+  }
 }
 
 .tracker-comp .tracker-bg .loader {
@@ -202,6 +227,12 @@
 .tracker-comp .map-container {
   width: 100%;
   height: 100%;
+}
+
+@media (max-width: 767px) {
+  .tracker-comp .map-container {
+    height: 87vh;
+  }
 }
 
 .tracker-comp .map-container .siren-marker {

@@ -5,19 +5,44 @@ $pink: #f5d3c8;
 @import url("https://use.typekit.net/keq4xak.css");
 @import url('https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+$tablet-width: 768px;
+$desktop-width: 1024px;
 
+@mixin phone {
+  @media (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: #{$tablet-width+1}) {
+    @content;
+  }
+}
 .hi-container {
   background-color: white;
-  width: 100%;
+  max-width: 100%;
   height: 95vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 5vh;
+  @include phone {
+    height: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
   .siren-img {
     height: 270px;
     z-index: 10;
     margin: 0;
+    @include phone {
+      height: 200px;
+    }
   }
   h1 {
     font-family: bely-display, sans-serif;
@@ -43,6 +68,10 @@ $pink: #f5d3c8;
     color: $red;
     padding: 10px;
     border-radius: 5px;
+    text-align: center;
+    @include phone {
+      width: 50%;
+    }
   }
   .intro {
     display: flex;
@@ -51,6 +80,12 @@ $pink: #f5d3c8;
     img {
       position: absolute;
       height: 70vh;
+      @include phone {
+        height: 40vh;
+        // width: 100%;
+        margin-top: -20vh;
+        overflow-x: hidden;
+      }
     }
     p {
       font-family: mr-eaves-sans, sans-serif;
@@ -63,7 +98,10 @@ $pink: #f5d3c8;
       background-color: $pink;
       padding: 10px;
       border-radius: 5px;
-      // word-spacing: .5vw;
+      @include phone {
+        font-size: 20px;
+        width: 80%;
+      }
     }
   }
   .io{
