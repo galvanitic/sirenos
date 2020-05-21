@@ -233,7 +233,6 @@ const Map = (props) => {
             ]
           }}
         >
-          {/* {sirenInfoVisible ?  : null} */}
           <Popover
             id={id}
             open={open}

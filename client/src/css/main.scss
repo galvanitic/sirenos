@@ -70,6 +70,9 @@ $desktop-width: 1024px;
 .NavBar {
   .MuiLinearProgress-barColorSecondary {
     background-color: $red;
+    position: fixed;
+    height: 4px;
+    z-index: 5000;
   }
 }
 .grecaptcha-badge{

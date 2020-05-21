@@ -42,6 +42,9 @@
 
 .NavBar .MuiLinearProgress-barColorSecondary {
   background-color: #e6516f;
+  position: fixed;
+  height: 4px;
+  z-index: 5000;
 }
 
 .grecaptcha-badge {
