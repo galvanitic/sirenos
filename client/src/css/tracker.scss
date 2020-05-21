@@ -9,7 +9,8 @@ $pink: #f5d3c8;
 @import url('https://fonts.googleapis.com/css2?family=Sanchez&display=swap');
 $tablet-width: 768px;
 $desktop-width: 1024px;
-
+$map-phone-height: 87vh;
+$form-phone-height: 70vh;
 @mixin phone {
   @media (max-width: #{$tablet-width - 1px}) {
     @content;
@@ -26,22 +27,22 @@ $desktop-width: 1024px;
   }
 }
 .tracker-comp {
-  @include phone {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-between;
-    height: 135vh;
-  }
-  .alerts {
-    position: fixed;
-    bottom: 20px;
-  }
   height: 93vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   // padding: 30px 0 0 0;
+  @include phone {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    height: $map-phone-height + $form-phone-height;
+  }
+  .alerts {
+    position: fixed;
+    bottom: 20px;
+  }
   .tracker-bg {
     // border: 1px solid red;
     position: absolute;
@@ -51,9 +52,13 @@ $desktop-width: 1024px;
     z-index: 1000;
     @include phone {
       width: 100%;
+      height: $form-phone-height;
       left: 0px;
       margin-top: 0;
       position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       // bottom: -63vh;
     }
     .loader {
@@ -63,6 +68,10 @@ $desktop-width: 1024px;
       display: flex;
       flex-direction: column;
       padding: 5%;
+      @include phone{
+        height: 100%;
+        justify-content: space-evenly;
+      }
       p#search-by-date{
         display: flex;
         justify-content: center;
@@ -177,7 +186,7 @@ $desktop-width: 1024px;
     width: 100%;
     height: 100%;
     @include phone {
-      height: 87vh;
+      height: $map-phone-height;
     }
     .siren-marker {
       background: none;
