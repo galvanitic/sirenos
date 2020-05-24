@@ -50,7 +50,7 @@ const Tracker = (props) => {
   const [succ1, setSucc1] = React.useState(false);
 
   React.useEffect(() => {
-    //call function to set component data
+    //call function to set component language data
     checkAuth()
     props.chActiveGeo(initCoords.lat, initCoords.lng);
     props.loaderOff();
@@ -71,7 +71,10 @@ const Tracker = (props) => {
         setTimeout(function() {setErrViewable(false)}, 5000);
       }
     }
-  }, [start, end, props.language, cookies["lang_id"], props.sirenRes, succ1]);
+    if (auth) {
+      alert(text.alert);
+    }
+  }, [start, end, props.language, cookies["lang_id"], props.sirenRes, succ1, auth]);
 
   const checkAuth = () => {
     if(props.language != null){
@@ -203,7 +206,6 @@ const Tracker = (props) => {
 
   return (
     <div className='tracker-comp'>
-      {/* {console.log(props.activeGeo)} */}
        <Paper className="tracker-bg">
          {mapLoader ? <LinearProgress className="loader" color="secondary" variant="query" /> : <div className="loader" />}
         <form className="tracker-form" noValidate autoComplete="off">

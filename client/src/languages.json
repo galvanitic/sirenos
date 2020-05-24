@@ -20,6 +20,7 @@
         "false": "Su idioma preferido no ha sido guardado en una cookie. Por favor evite recargar la página."
       },
       "tracker": {
+        "alert": "Remember, this app is meant to track ICE raids, a topic that should not be taken lightly. Please use this app honestly, responsibly, and at your own discretion. By continuing, you release Rodolfo Galván, the creator of this app, from any liability.",
         "address": "Dirección",
         "from": "De",
         "to": "A",
@@ -65,6 +66,7 @@
         "false": "Your preferred language has not been saved in a cookie. Please avoid reloading the page."
       },
       "tracker": {
+        "alert": "Recuerde, esta aplicación fue creada para rastrear las redadas de ICE, un tema que no se debe tomar a la ligera. Utilice esta aplicación de manera honesta, responsable y a su propio criterio. Al continuar, libera a Rodolfo Galván, el creador de esta aplicación, de cualquier responsabilidad.",
         "address": "Address",
         "from": "From",
         "to": "To",
@@ -110,6 +112,7 @@
         "false": "Seu idioma preferido não foi salvo numa cookie. Por-favor evite regarregar a página."
       },
       "tracker": {
+        "alert": "Lembre-se de que este aplicativo foi criado para rastrear ataques do ICE, um tópico que não deve ser tomado de ânimo leve. Por favor, use este aplicativo com honestidade, responsabilidade e a seu critério. Ao continuar, você libera Rodolfo Galván, o criador deste aplicativo, de qualquer responsabilidade.",
         "address": "Endereço",
         "from": "De",
         "to": "Até",
@@ -155,6 +158,7 @@
         "false": "您的首选语言尚未保存在Cookie中。 避免重新加载页面。"
       },
       "tracker": {
+        "alert": "请记住，此应用是为了跟踪ICE突袭而创建的，这个话题不容掉以轻心。 请诚实，负责任地使用此应用程序，并自行决定。 继续操作，您免除此应用程序的创建者RodolfoGalván的任何责任。",
         "address": "地址",
         "from": "从",
         "to": "至",
@@ -200,6 +204,7 @@
         "false": "आपकी पसंदीदा भाषा कुकी में सहेजी नहीं गई है। पृष्ठ को फिर से लोड करने से बचें।"
       },
       "tracker": {
+        "alert": "याद रखें, यह ऐप ICE के छापे को ट्रैक करने के लिए बनाया गया था, एक ऐसा विषय जिसे हल्के में नहीं लिया जाना चाहिए। कृपया इस ऐप का उपयोग ईमानदारी से, जिम्मेदारी से और अपने विवेक से करें। जारी रखकर, आप किसी भी दायित्व से, इस ऐप के निर्माता रोडोल्फो गैल्वेन को जारी करते हैं।",
         "address": "पता",
         "from": "से",
         "to": "सेवा",
