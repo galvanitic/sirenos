@@ -51,6 +51,48 @@
   z-index: 3000;
 }
 
+.qr {
+  width: 100%;
+  height: 100%;
+}
+
+.qr-code {
+  width: 20vw;
+  -webkit-box-shadow: #898989 0px 0px 4px;
+          box-shadow: #898989 0px 0px 4px;
+  border-radius: 15px;
+  padding: 10px;
+  -webkit-transition: cubic-bezier(0.075, 0.82, 0.165, 1) all 1.5s;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) all 1.5s;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .qr-code {
+    width: 60vw;
+  }
+}
+
+.qr-code:hover {
+  -webkit-box-shadow: #898989 0px 2px 9px 0px;
+          box-shadow: #898989 0px 2px 9px 0px;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+.qr-code:active {
+  -webkit-box-shadow: #898989 0px 0px 4px;
+          box-shadow: #898989 0px 0px 4px;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.MuiSpeedDial-root {
+  position: fixed;
+  bottom: 80px;
+  right: 80px;
+}
+
 body {
   max-width: 100vw;
   overflow-x: hidden;

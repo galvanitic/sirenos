@@ -14,13 +14,13 @@ class Footer extends Component {
         </div>
         <hr />
         <div className="lower-ftr">
-          <a className="twitter" href="https://twitter.com/galvanitic">
+          <a className="twitter" href="https://twitter.com/galvanitic" target="_blank" rel='noreferrer'>
             <TwitterIcon />
           </a>
-          <a className="github" href='https://github.com/galvanitic/siren' alt="See the source code on GitHub">
+          <a className="github" href='https://github.com/galvanitic/siren' alt="See the source code on GitHub" target="_blank" rel='noreferrer'>
             <GitHubIcon />
           </a>
-          <a className="linkedin" href='https://www.linkedin.com/in/galvanitic/'>
+          <a className="linkedin" href='https://www.linkedin.com/in/rjgalvan/' target="_blank" rel='noreferrer'>
             <LinkedInIcon />
           </a>
 

@@ -78,6 +78,38 @@ $desktop-width: 1024px;
 .grecaptcha-badge{
   z-index: 3000;
 }
+
+.qr{
+  width: 100%;
+  height: 100%;
+  @include phone {
+    // width: 10%
+  }
+}
+.qr-code{
+  width: 20vw;
+  box-shadow: #898989 0px 0px 4px;
+  border-radius: 15px;
+  padding: 10px;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) all 1.5s;
+  overflow: hidden;
+  @include phone {
+    width: 60vw;
+  }
+}
+.qr-code:hover{
+  box-shadow: #898989 0px 2px 9px 0px;
+  transform: translateY(-2px);
+}
+.qr-code:active{
+  box-shadow: #898989 0px 0px 4px;
+  transform: translateY(2px);
+}
+.MuiSpeedDial-root {
+  position: fixed;
+  bottom: 80px;
+  right: 80px;
+}
 body {
   max-width: 100vw;
   overflow-x: hidden;

@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import galvanite from '../galvanite';
-import revGeocoder from 'reverse-geocoding-google';
+import Geocode from "react-geocode";
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
@@ -19,22 +19,43 @@ const SirenInfo = (props) => {
   const [geoconfig, setGeoConfig] = React.useState({
     'latitude': props.currentUsrGeo.lat,
     'longitude': props.currentUsrGeo.lng,
-    'key': galvanite.map_api_key
   });
   const [address, setAddress] = React.useState("");
   const [description, setDescription] = React.useState("");
   const [iso, setiso] = React.useState(null);
   const [reCaptchaVar, setReCaptchaVar] = React.useState(false);
+  Geocode.setApiKey(galvanite.map_api_key);
+  Geocode.setLanguage(iso ? languages.types[props.language].iso : "en");
 
   React.useEffect(() => {
     if (geoconfig.latitude !== undefined || geoconfig.longitude !== undefined){
-      revGeocoder.location(geoconfig, function (err, data){
-        if (err) {
-          console.log(err);
-        }else {
-          setAddress(data.results[0].formatted_address);
+      Geocode.fromLatLng(geoconfig.latitude, geoconfig.longitude).then(
+        (response) => {
+          const address = response.results[0].formatted_address;
+          let city, state, country;
+          for (let i = 0; i < response.results[0].address_components.length; i++) {
+            for (let j = 0; j < response.results[0].address_components[i].types.length; j++) {
+              switch (response.results[0].address_components[i].types[j]) {
+                case "locality":
+                  city = response.results[0].address_components[i].long_name;
+                  break;
+                case "administrative_area_level_1":
+                  state = response.results[0].address_components[i].long_name;
+                  break;
+                case "country":
+                  country = response.results[0].address_components[i].long_name;
+                  break;
+              }
+            }
+          }
+          // console.log(city, state, country);
+          // console.log(address);
+          setAddress(address)
+        },
+        (error) => {
+          console.error(error);
         }
-      });
+      );
     }
     checkAuth()
   },[props.shouldBeVisible, props.sirenRes, iso, reCaptchaVar])
