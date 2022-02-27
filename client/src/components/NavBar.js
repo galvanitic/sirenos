@@ -193,11 +193,11 @@ let NavBar = (props) => {
       </List>
       <Divider />
       <List>
-        <ListItem button key={2} onClick={() => window.location.href = "mailto:hi@sirenos.co"}>
+        <ListItem button key={2} onClick={() => window.location.href = "mailto:hola@rglvn.com"}>
           <ListItemIcon><MailIcon /></ListItemIcon>
           <ListItemText primary="hi@sirenos.co" />
         </ListItem>
-        <ListItem button key={3} onClick={() => window.location.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=finance%40rjgalvan.com&item_name=Sirenos.co&currency_code=USD&source=url"}>
+        <ListItem button key={3} onClick={() => window.location.href = "https://www.paypal.com/donate/?business=AZ2EEWJ8FHGRE&no_recurring=0&currency_code=USD"}>
           <ListItemIcon><FavoriteIcon /></ListItemIcon>
           <ListItemText primary={state.nav.donate} />
         </ListItem>
