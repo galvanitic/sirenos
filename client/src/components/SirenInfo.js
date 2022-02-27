@@ -22,11 +22,11 @@ const SirenInfo = (props) => {
   });
   const [address, setAddress] = React.useState("");
   const [description, setDescription] = React.useState("");
-  const [iso, setiso] = React.useState(null);
+  const [iso, setiso] = React.useState("");
   const [reCaptchaVar, setReCaptchaVar] = React.useState(false);
   Geocode.setApiKey(galvanite.map_api_key);
+  Geocode.setLanguage(iso ? languages.types[props.language].iso : "en");
   React.useEffect(() => {
-    Geocode.setLanguage(iso ? languages.types[props.language].iso : "en");
     if (geoconfig.latitude !== undefined || geoconfig.longitude !== undefined){
       Geocode.fromLatLng(geoconfig.latitude, geoconfig.longitude).then(
         (response) => {
