@@ -5,18 +5,18 @@ const sirensRouter = require('./routers/sirens');
 const app = express();
 const puerto = process.env.PORT || 4001;
 
-// var whitelist = ['http://sirenos.co', 'https://sirenos.co', 'http://www.sirenos.co', 'https://www.sirenos.co']
-// var corsOptions = {
-//   origin: function (origin, callback) {
-//     if (whitelist.indexOf(origin) !== -1) {
-//       callback(null, true)
-//     } else {
-//       callback(new Error('No permitido por el maldito CORS'))
-//     }
-//   }
-// }
+var whitelist = ['http://sirenos.co', 'https://sirenos.co', 'http://www.sirenos.co', 'https://www.sirenos.co']
+var corsOptions = {
+  origin: function (origin, callback) {
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true)
+    } else {
+      callback(new Error('No permitido por el maldito CORS.'))
+    }
+  }
+}
 
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(function (req, res, next) {
 
   // Website you wish to allow to connect
