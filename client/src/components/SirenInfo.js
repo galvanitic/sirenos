@@ -25,9 +25,8 @@ const SirenInfo = (props) => {
   const [iso, setiso] = React.useState(null);
   const [reCaptchaVar, setReCaptchaVar] = React.useState(false);
   Geocode.setApiKey(galvanite.map_api_key);
-  Geocode.setLanguage(iso ? languages.types[props.language].iso : "en");
-
   React.useEffect(() => {
+    Geocode.setLanguage(iso ? languages.types[props.language].iso : "en");
     if (geoconfig.latitude !== undefined || geoconfig.longitude !== undefined){
       Geocode.fromLatLng(geoconfig.latitude, geoconfig.longitude).then(
         (response) => {

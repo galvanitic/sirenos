@@ -44,6 +44,16 @@
           "description": "Descripción",
           "source": "Fuente"
         }
+      },
+      "coffee":{
+        "bttn": "Cómprame un cafecito",
+        "secure": "Realice un pago seguro a través de Stripe",
+        "ad": "Vea un anuncio corto.",
+        "amnt": "Cantidad",
+        "card":"Número de tarjeta",
+        "gracias":"Muchísimas gracias por el café! Su apoyo dejará que esta aplicación sea disponible y gratis al publico por un largo tiempo!",
+        "fail":"La donación fallo",
+        "donate":"Donar"
       }
     },
 
@@ -90,6 +100,16 @@
           "description": "Description",
           "source": "Source"
         }
+      },
+      "coffee":{
+        "bttn": "Buy me a coffee",
+        "secure": "Make a safe donation through Stripe",
+        "ad": "Watch a short ad.",
+        "amnt": "Amount",
+        "card":"Card Number",
+        "gracias":"Thank you for the coffee! Your support will make this application available and free to the public for a long time to come.",
+        "fail":"Your donation failed.",
+        "donate":"Donate"
       }
     },
 
@@ -136,6 +156,16 @@
           "description": "Descrição",
           "source": "Fonte"
         }
+      },
+      "coffee":{
+        "bttn": "Me compra um cafezinho",
+        "secure": "Faça um pagamento seguro por meio de Stripe",
+        "ad": "Assista a um pequeno anúncio em vídeo",
+        "amnt": "Cantidad",
+        "card":"Número do cartão",
+        "gracias":"Obrigado pelo café! Seu apoio vai disponibilizar este aplicativo gratuitamente para o público por muito tempo!",
+        "fail":"A doação falhou",
+        "donate":"Doar"
       }
     },
 
@@ -182,6 +212,16 @@
           "description": "描述",
           "source": "资源"
         }
+      },
+      "coffee":{
+        "bttn": "给我买杯咖啡",
+        "secure": "通过Stripe进行安全付款",
+        "ad": "观看简短的视频广告",
+        "amnt": "量",
+        "card":"卡号",
+        "gracias":"非常感谢您的咖啡。 您的支持将使该应用程序免费提供，并在很长一段时间内向公众开放！",
+        "fail":"捐赠失败",
+        "donate":"捐"
       }
     },
 
@@ -228,6 +268,16 @@
           "description": "विवरण",
           "source": "स्रोत"
         }
+      },
+      "coffee":{
+        "bttn": "मुझे एक कॉफी खरीदो",
+        "secure": "स्ट्राइप के माध्यम से सुरक्षित भुगतान करें",
+        "ad": "एक छोटा वीडियो विज्ञापन देखें",
+        "amnt": "रकम",
+        "card":"कार्ड नंबर",
+        "gracias":"कॉफी के लिए बहुत बहुत धन्यवाद! आपका दान इस ऐप को उपलब्ध होने और आने वाले वर्षों के लिए जनता के लिए नि: शुल्क करने की अनुमति देगा!",
+        "fail":"दान विफल रहा",
+        "donate":"दान करना"
       }
     }
   ]

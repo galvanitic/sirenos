@@ -1,4 +1,4 @@
-runtime: nodejs10
+runtime: nodejs16
 
 env_variables:
   CLOUD_INSTANCE: siren-274816:us-central1:siren

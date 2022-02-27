@@ -16,8 +16,8 @@ class Connection {
       }
 
       if (process.env.NODE_ENV === 'production' && process.env.CLOUD_INSTANCE) {
-        console.log(`connect socket: ${process.env.CLOUD_INSTANCE}`)
-        // config.socketPath = `/cloudsql/${process.env.CLOUD_INSTANCE}`
+        console.log(`connect socket: ${galvanite.socketPath}`)
+        config.socketPath = `/cloudsql/${galvanite.socketPath}`
       }
 
       this.pool = mysql.createPool(config)

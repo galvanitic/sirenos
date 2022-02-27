@@ -4,10 +4,9 @@
   "description": "Instancia community resources.",
   "main": "index.js",
   "dependencies": {
-    "concurrently": "^5.1.0",
+    "concurrently": "^7.0.0",
     "react-cookie": "^4.0.3"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "client": "cd client && npm start",
